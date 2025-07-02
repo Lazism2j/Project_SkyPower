@@ -11,9 +11,13 @@ namespace KYG_skyPower
 
         private void OnTriggerEnter(Collider other)
         {
-            if (other.TryGetComponent<PlayerInventoryHolder>(out var playerHolder))
+            if (other.TryGetComponent<PlayerInventoryHolder>(out var playerHolder)) 
             {
-                playerHolder.inventoryManagerSO.AddItem(itemData, 1);
+                playerHolder.inventoryManagerSO.AddItem(itemData, 1); // 아이템 추가 (아이템 데이터와 개수 1개를 추가)
+
+                // UI 갱신
+                if (playerHolder.inventoryUIController != null) // 인벤토리 UI 컨트롤러가 할당되어 있다면
+                    playerHolder.inventoryUIController.RefreshInventoryUI(); // 인벤토리 UI를 갱신
 
                 // 디버그 출력 (즉시 인벤토리 확인)
                 playerHolder.PrintInventory();

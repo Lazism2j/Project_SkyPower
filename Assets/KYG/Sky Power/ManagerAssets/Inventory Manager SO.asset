@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   inventory:
   - itemData: {fileID: 11400000, guid: 1718f5bb0fa70264da8895b5c85923e7, type: 2}
-    count: 12
+    count: 15

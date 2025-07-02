@@ -42,7 +42,7 @@ namespace KYG_skyPower
                 Debug.Log($"[UI] 슬롯 생성: {slot.itemData.itemName} x {slot.count}");
 
                 // 바인딩(예시, 실제 컴포넌트명/구조에 맞게 수정)
-                go.transform.Find("NameText").GetComponent<Text>().text = slot.itemData.itemName; 
+                go.transform.Find("NameText").GetComponent<Text>().text = slot.itemData.itemName;
                 go.transform.Find("CountText").GetComponent<Text>().text = $"x{slot.count}"; 
                 var iconImage = go.transform.Find("Icon").GetComponent<Image>(); 
                 if (slot.itemData.itemPrefab != null) 
