@@ -12,4 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6eb75357eb6908f45b7e9578e72d48d4, type: 3}
   m_Name: Inventory Manager SO
   m_EditorClassIdentifier: 
-  inventory: []
+  inventory:
+  - itemData: {fileID: 11400000, guid: 1718f5bb0fa70264da8895b5c85923e7, type: 2}
+    count: 12

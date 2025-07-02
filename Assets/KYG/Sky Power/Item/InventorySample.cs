@@ -12,13 +12,14 @@ namespace KYG_skyPower
         public ItemManagerSO itemManagerSO;         // 에디터에서 할당
         public InventoryManagerSO inventoryManagerSO; // 에디터에서 할당
 
+
         void Start()
         {
             // 1. 아이템 추가 (ID로)
             inventoryManagerSO.AddItemById(itemManagerSO, 1, 5);
 
             // 2. 아이템 추가 (이름으로)
-            var item = itemManagerSO.GetItemByName("체력포션");
+            var item = itemManagerSO.GetItemByName("공격력 증가");
             if (item != null)
                 inventoryManagerSO.AddItem(item, 2);
 
