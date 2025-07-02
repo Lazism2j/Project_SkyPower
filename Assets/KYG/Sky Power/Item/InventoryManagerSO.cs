@@ -7,6 +7,7 @@ namespace KYG_skyPower
     [CreateAssetMenu(menuName = "Manager/InventoryManagerSO")]
     public class InventoryManagerSO : ScriptableObject // 아이템 인벤토리 매니저 SO (아이템을 관리하는 스크립트 오브젝트)
     {
+
         [Header("보유 아이템 리스트")]
         public List<InventorySlot> inventory = new List<InventorySlot>(); // 보유 아이템을 저장하는 리스트 (InventorySlot 타입의 리스트)
 

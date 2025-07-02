@@ -15,7 +15,15 @@ namespace KYG_skyPower
 
         void Start()
         {
-            RefreshInventoryUI(); // 초기 UI 갱신
+            RefreshInventoryUI();
+
+            // 첫 슬롯에서 자식들 이름 확인
+            if (slotUIList.Count > 0)
+            {
+                var go = slotUIList[0];
+                foreach (var tr in go.GetComponentsInChildren<Transform>(true))
+                    Debug.Log("[프리팹 자식 오브젝트] " + tr.name);
+            }
         }
 
         public void RefreshInventoryUI() // 인벤토리 UI 갱신 메서드
