@@ -6,35 +6,36 @@ using UnityEngine;
 using System;
 using JYL;
 
+[CreateAssetMenu(fileName = "TripleShot", menuName = "ScriptableObject/BulletPattern/TripleShot")]
 public class TripleShot : BulletPatternData
 {
-    private int shotCount = 3;
-    private float delayBetweenshots = 0.1f;
-    private float fireDelay = 2f;
-    public float bulletReturnTimer = 1.5f;
-    public override IEnumerator Shoot(Transform firePoint, GameObject bulletPrefab, float bulletSpeed)
+    [Header("Triple Shot Settings")]
+    public int shotCount = 3;
+    public float delayBetweenshots = 0.1f;
+    public float returnToPoolTimer = 5f;
+    public override IEnumerator Shoot(Transform[] firePoints, float bulletSpeed, ObjectPool pool)
     {
-        BulletPrefabController bullets = objectPool.ObjectOut() as BulletPrefabController;
-
-        while (true)
+        for (int i = 0; i < shotCount; i++)
         {
-            // bullets.transform.position = firePoint.position;
-            for (int i = 0; i < shotCount; i++)
+            BulletPrefabController bullet = pool.ObjectOut() as BulletPrefabController;
+            bullet.objectPool = pool;
+
+            if (bullet != null)
             {
-                // bullet.ReturnToPool(bulletReturnTimer);
-                foreach (BulletInfo info in bullets.bullet)
+                bullet.ReturnToPool(returnToPoolTimer);
+
+                foreach (BulletInfo info in bullet.bullet)
                 {
                     if (info.rig != null)
                     {
                         info.trans.gameObject.SetActive(true);
-                        info.trans.position = firePoint.position;
+                        info.trans.position = firePoints[0].position;
                         info.rig.velocity = Vector3.zero;
-                        info.rig.AddForce(firePoint.forward * bulletSpeed, ForceMode.Impulse);
-                        yield return new WaitForSeconds(delayBetweenshots);
+                        info.rig.AddForce(firePoints[0].forward * bulletSpeed, ForceMode.Impulse);
                     }
                 }
             }
-            yield return new WaitForSeconds(fireDelay);
+            yield return new WaitForSeconds(delayBetweenshots);
         }
     }
 }

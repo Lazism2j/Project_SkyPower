@@ -2,33 +2,40 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using JYL;
+using System.Diagnostics.Tracing;
 
+[CreateAssetMenu(fileName = "SingleShot", menuName = "ScriptableObject/BulletPattern/SingleShot")]
 public class SingleShot : BulletPatternData
 {
-    private float fireDelay = 1f;
-    public override IEnumerator Shoot(Transform firePoint, GameObject bulletPrefab, float bulletSpeed)
+    [Header("Single Shot Settings")]
+    public float returnToPoolTimer = 5f;
+    public override IEnumerator Shoot(Transform[] firePoints, float bulletSpeed, ObjectPool pool)
     {
-        BulletPrefabController bullets = objectPool.ObjectOut() as BulletPrefabController;
-        while (true)
-        {
-            // TODO : 오브젝트풀로 돌아가는 타이밍 다시 생각
-            // bullet.ReturnToPool(bulletReturnTimer);
-            foreach (BulletInfo info in bullets.bullet)
-            {
-                if (info.rig != null)
-                {
-                    info.trans.gameObject.SetActive(true);
+        BulletPrefabController bullet = pool.ObjectOut() as BulletPrefabController;
+        bullet.objectPool = pool;
+        //
+        // 왜냐하면 
+        // a enemy(SingleShot) 소환 - a ObjectPool로 연결됨. =>
+        // b enemy(SingleShot) 소환 - b ObjectPool로 연결됨. =>
+        // a enemy의 ObjectPool은 b ObjectPool로 덮어 씌우게 됨 =>
+        // Elite Enemy와 Normal Enemy의 BulletPattern이 같다면 문제발생.
+        //
+        bullet.ReturnToPool(returnToPoolTimer);
 
-                    // TODO : 총구쪽으로 모든 총알이 모이니, 여러 총알일때는 수정해야함.
-                    // bullet.transform.position = firePoint.position;
-                    info.trans.position = firePoint.position;
-                    info.rig.velocity = Vector3.zero;
-                    info.rig.AddForce(firePoint.forward * bulletSpeed, ForceMode.Impulse);
-                }
-                yield return new WaitForSeconds(fireDelay);
+        foreach (BulletInfo info in bullet.bullet)
+        {
+            if (info.rig != null)
+            {
+                info.trans.gameObject.SetActive(true);
+
+                // TODO : 총구쪽으로 모든 총알이 모이니, 여러 총알일때는 수정해야함.
+                info.trans.position = firePoints[0].position;
+                info.rig.velocity = Vector3.zero;
+                info.rig.AddForce(firePoints[0].forward * bulletSpeed, ForceMode.Impulse);
             }
             yield return null;
         }
     }
 }
+
 

@@ -8,9 +8,9 @@ namespace JYL
     {
         [SerializeField] string popUpPath = "JYL/UI/Canvas_PopUp";
         [SerializeField] string prefabPath = "JYL/UI";
+
         private PopUpUI popUp;
         public PopUpUI PopUp
-
         {
             get 
             {
@@ -25,12 +25,31 @@ namespace JYL
                         Debug.LogWarning($"ÇØ´ç °æ·Î¿¡ ÆË¾÷ ÇÁ¸®ÆÕÀÌ ¾øÀ½: {popUpPath}");
                         return null;
                     }
-                    return Instantiate(prefab);
+                    PopUpUI go = Instantiate(prefab);
+                    DontDestroyOnLoad(go);
+                    return go;
                 }
+                DontDestroyOnLoad(popUp);
                 return popUp;
             }
         }
+
+        // ¼±ÅÃ UI ÀÎµ¦½º
+        public int selectIndexUI = 0;
+
         protected override void Awake() => base.Awake();
+        private void Update()
+        {
+            if (Input.GetKeyDown(KeyCode.Escape) && PopUpUI.IsPopUpActive && !Util.escPressed &&!PartySetPopUp.isPartySetting)
+            {
+                Instance.ClosePopUp();
+                Util.ConsumeESC();
+            }
+        }
+        private void LateUpdate()
+        {
+            Util.ResetESC();
+        }
 
         // ÆË¾÷ UI¸¦ ²¨³½´Ù
         public T ShowPopUp<T>() where T : BaseUI
@@ -49,6 +68,14 @@ namespace JYL
         public void ClosePopUp()
         {
             PopUp.PopUIStack();
+        }
+        public void CleanPopUp()
+        {
+            while(true)
+            {
+                PopUp.PopUIStack();
+                if (PopUp.StackCount() == 0) break;
+            }
         }
     }
 }
