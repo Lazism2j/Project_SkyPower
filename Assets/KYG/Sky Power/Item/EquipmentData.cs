@@ -1,7 +1,20 @@
-﻿namespace KYG_skyPower
+﻿using System;
+using UnityEngine;
+
+namespace KYG_skyPower
 {
-    internal class EquipmentData
+    public class EquipmentData
     {
-        public string Equip_Type { get; internal set; }
+        public object Equip_Id { get; internal set; }
+
+        internal Sprite GetIcon()
+        {
+            throw new NotImplementedException();
+        }
+
+        internal string GetName()
+        {
+            throw new NotImplementedException();
+        }
     }
 }

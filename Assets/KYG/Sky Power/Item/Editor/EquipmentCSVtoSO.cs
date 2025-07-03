@@ -14,34 +14,34 @@ public class EquipmentCSVtoSO
             string csvPath = "Assets/KYG/Sky Power/Item/Resources/Equipment_Table.csv";  // CSV 경로(에셋폴더 기준)
             string soPath = "Assets/KYG/Sky Power/Item/Editor/EquipmentTableSO.asset"; // SO 저장 경로
 
-            List<EquipmentData> dataList = new List<EquipmentData>();
-            var lines = File.ReadAllLines(csvPath);
+            List<EquipmentData> dataList = new List<EquipmentData>(); // 장비 데이터 리스트
+            var lines = File.ReadAllLines(csvPath); // CSV 파일의 모든 줄 읽기
 
             int ParseInt(string str)
             {
                 str = str.Trim();
-                if (string.IsNullOrEmpty(str) || str == "-") return 0;
-                int v = 0;
-                int.TryParse(str, out v);
-                return v;
+                if (string.IsNullOrEmpty(str) || str == "-") return 0; // 빈 문자열이나 '-'인 경우 0 반환
+                int v = 0; // 정수로 변환
+                int.TryParse(str, out v); // TryParse를 사용하여 변환 실패 시 0 유지
+                return v; 
             }
 
-            float ParseFloat(string str)
+            float ParseFloat(string str) 
             {
-                str = str.Trim();
-                if (string.IsNullOrEmpty(str) || str == "-") return 0f;
-                float v = 0;
-                float.TryParse(str, out v);
+                str = str.Trim(); // 문자열 양쪽 공백 제거
+                if (string.IsNullOrEmpty(str) || str == "-") return 0f; // 빈 문자열이나 '-'인 경우 0.0f 반환
+                float v = 0; 
+                float.TryParse(str, out v); // TryParse를 사용하여 변환 실패 시 0.0f 유지
                 return v;
             }
 
-            // 탭으로 구분(제공하신 CSV는 탭 구분으로 보임)
+            // 탭으로 구분(제공하신 CSV는 탭 구분으로 보임) 
             for (int i = 1; i < lines.Length; i++) // 0번은 헤더
             {
-                var tokens = lines[i].Split(',');
+                var tokens = lines[i].Split(','); // CSV의 각 줄을 쉼표로 분리하여 토큰화
 
                 // 빈 줄 방지
-                if (string.IsNullOrWhiteSpace(lines[i]) || tokens.Length < 19) continue;
+                if (string.IsNullOrWhiteSpace(lines[i]) || tokens.Length < 19) continue; // 빈 줄이나 토큰이 부족한 경우 건너뛰기
 
                 var data = new EquipmentData
                 {
@@ -69,11 +69,11 @@ public class EquipmentCSVtoSO
                 dataList.Add(data);
             }
 
-            EquipmentTableSO asset = ScriptableObject.CreateInstance<EquipmentTableSO>();
-            asset.equipmentList = dataList;
+            EquipmentTableSO asset = ScriptableObject.CreateInstance<EquipmentTableSO>(); // EquipmentTableSO 인스턴스 생성
+            asset.equipmentList = dataList; // 장비 데이터 리스트 할당
 
-            AssetDatabase.CreateAsset(asset, soPath);
-            AssetDatabase.SaveAssets();
+            AssetDatabase.CreateAsset(asset, soPath); // 에셋 데이터베이스에 SO로 저장
+            AssetDatabase.SaveAssets(); // 변경 사항 저장
             Debug.Log("장비 CSV → SO 변환 완료!");
         }
     }
