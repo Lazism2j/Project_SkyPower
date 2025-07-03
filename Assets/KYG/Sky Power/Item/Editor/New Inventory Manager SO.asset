@@ -12,4 +12,32 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6eb75357eb6908f45b7e9578e72d48d4, type: 3}
   m_Name: New Inventory Manager SO
   m_EditorClassIdentifier: 
-  inventory: []
+  inventory:
+  - count: 1
+  - count: 1
+  - count: 1
+  - count: 1
+  - count: 1
+  - count: 1
+  - count: 1
+  - count: 1
+  - count: 1
+  - count: 1
+  - count: 1
+  - count: 1
+  - count: 1
+  - count: 1
+  - count: 1
+  - count: 1
+  - count: 1
+  - count: 1
+  - count: 1
+  - count: 1
+  - count: 1
+  - count: 1
+  - count: 1
+  - count: 1
+  - count: 1
+  - count: 1
+  - count: 1
+  - count: 1

@@ -9,30 +9,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 0}
+  m_Script: {fileID: 11500000, guid: ec4efd708b3b7214ba99a6c0083caec3, type: 3}
   m_Name: EquipmentTableSO
-  m_EditorClassIdentifier: Assembly-CSharp-Editor:KYG_skyPower:EquipmentTableSO
+  m_EditorClassIdentifier: 
   equipmentList:
-  - Equip_Id: 0
-    Equip_Grade: Equip_Grade
-    Equip_Name: Equip_Name
-    Equip_Type: Equip_Type
-    Equip_Set_Type: Equip_Set_Type
-    Equip_Img: Equip_Img
-    Equip_Level: 0
-    Equip_Maxlevel: 0
-    Equip_Upgrade_Default: 0
-    Equip_Upgrade_Plus: 0
-    Stat_Type: Stat_Type
-    Base_Value: 0
-    Per_Level: 0
-    Effect_Trigger: Effect_Trigger
-    Effect_Timing: Effect_Timing
-    Effect_Type: Effect_Type
-    Effect_Value: 0
-    Effect_Time: 0
-    Effect_Chance: 0
-    Effect_Desc: Effect_Desc
   - Equip_Id: 30001
     Equip_Grade: Legend
     Equip_Name: "\uCDA9\uC804\uC758 \uC624\uBC84\uB4DC\uB77C\uC774\uBE0C"
@@ -604,46 +584,3 @@ MonoBehaviour:
     Effect_Chance: 0
     Effect_Desc: "\u2022\uBAB9 \uCC98\uCE58 \uC2DC \uC77C\uC815 \uD655\uB960\uB85C
       \uC274\uB4DC\uAC00 \uC0DD\uC131 \uB429\uB2C8\uB2E4."
-  - Equip_Id: 30029
-    Equip_Grade: Normal
-    Equip_Name: "\uB9F9\uACF5\uC758 \uD074\uB7ED \uC54C\uB808\uADF8\uB85C"
-    Equip_Type: accessory
-    Equip_Set_Type: "\uB9F9\uACF5\uC758"
-    Equip_Img: sud_ca.png
-    Equip_Level: 1
-    Equip_Maxlevel: 1
-    Equip_Upgrade_Default: 0
-    Equip_Upgrade_Plus: 0
-    Stat_Type: '-'
-    Base_Value: 0
-    Per_Level: 0
-    Effect_Trigger: weapon Set_Type == amor Set_Type == accessory Set_Type
-    Effect_Timing: game start
-    Effect_Type: atk
-    Effect_Value: 0
-    Effect_Time: 0
-    Effect_Chance: 0
-    Effect_Desc: "\u2022\uAC8C\uC784 \uC2DC\uC791\uACFC \uB3D9\uC2DC\uC5D0 \uC18C\uB7C9\uC758
-      \uACF5\uACA9\uB825\uC774 \uC99D\uAC00 \uD569\uB2C8\uB2E4."
-  - Equip_Id: 30030
-    Equip_Grade: Normal
-    Equip_Name: "\uAD11\uC18D\uC758 \uD074\uB7ED \uC54C\uB808\uADF8\uB85C"
-    Equip_Type: accessory
-    Equip_Set_Type: "\uAD11\uC18D\uC758"
-    Equip_Img: lit_ca.png
-    Equip_Level: 1
-    Equip_Maxlevel: 1
-    Equip_Upgrade_Default: 0
-    Equip_Upgrade_Plus: 0
-    Stat_Type: '-'
-    Base_Value: 0
-    Per_Level: 0
-    Effect_Trigger: weapon Set_Type == amor Set_Type == accessory Set_Type
-    Effect_Timing: using  ult
-    Effect_Type: atk speed
-    Effect_Value: 0.5
-    Effect_Time: 0
-    Effect_Chance: 0
-    Effect_Desc: "\u2022\uAD81\uADF9\uAE30 \uBC1C\uB3D9 \uC2DC \uC9E7\uC740 \uC2DC\uAC04
-      \uB3D9\uC548 \uB300\uB7C9\uC758 \uACF5\uACA9 \uC18D\uB3C4\uAC00 \uC0C1\uC2B9
-      \uD569\uB2C8\uB2E4."

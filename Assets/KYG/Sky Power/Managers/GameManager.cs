@@ -61,6 +61,24 @@ namespace KYG_skyPower
             }
         }
 
+        public Dictionary<KYG_skyPower.EquipmentSlotType, EquipmentData> equippedDict = new();
+
+        public void Equip(EquipmentData equip)
+        {
+            equippedDict[equip.GetSlotType()] = equip;
+            // 상태 갱신, 능력치 갱신 등
+        }
+
+        public bool IsEquipped(IInventoryItemAdapter equip)
+        {
+            if (equip is EquipmentData data)
+            {
+                if (equippedDict.TryGetValue(data.GetSlotType(), out var equipped))
+                    return equipped == data;
+            }
+            return false;
+        }
+
         public void SelectSaveFile(int index)
         {
             if (index >= 0 && index < saveFiles.Length)
