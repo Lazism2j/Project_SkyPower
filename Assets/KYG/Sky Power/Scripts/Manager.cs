@@ -31,6 +31,8 @@ namespace KYG_skyPower
 
         public static SceneChangerManagerSO SceneChanger => SceneChangerManagerSO.Instance;
 
+        public static StageDataManager SDM => StageDataManager.Instance;
+        public static GameSceneManager GSM => GameSceneManager.Instance;
 
         /*void Awake()
         {
@@ -43,6 +45,7 @@ namespace KYG_skyPower
             //DialogueManager.Instance.Init();
         }*/
 
+        // 프로그램 시작과 동시에 수행함 (순서대로 매니저들의 초기화를 정할 수 있음)
         [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.BeforeSceneLoad)]
         public static void InitAll()
         {
@@ -58,6 +61,8 @@ namespace KYG_skyPower
             //UI.Init();
             Score.Init();
             //Dialogue.Init();
+            SDM.Init();
+            GSM.Init();
         }
     }
 }

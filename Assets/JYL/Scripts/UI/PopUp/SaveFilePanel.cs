@@ -9,6 +9,7 @@ namespace JYL
     {
         // 불러왔던 세이브 데이터 기준으로 데이터를 채운다
         GameData data;
+        
         void Start()
         {
             data = Manager.Game.saveFiles[Manager.Game.currentSaveIndex];
@@ -20,7 +21,7 @@ namespace JYL
         //세이브파일을 삭제
         private void OnDelClick(PointerEventData eventData)
         {
-            Manager.Save.GameDelete(data, Manager.Game.currentSaveIndex+1);
+            Manager.Save.GameDelete(data, Manager.Game.currentSaveIndex + 1);
             UIManager.Instance.ClosePopUp();
             Manager.Game.ResetSaveRef();
         }
@@ -30,6 +31,7 @@ namespace JYL
         {
             // 씬 넘어감 -> mainScene
             // 이전 UI들로 인해서 세이브파일은 선택되어 있음.
+            Manager.SDM.SyncRuntimeDataWithStageInfo();
             SceneManager.LoadSceneAsync("bMainScene_JYL");
         }
 

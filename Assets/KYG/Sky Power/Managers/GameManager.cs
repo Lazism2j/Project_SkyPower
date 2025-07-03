@@ -42,7 +42,8 @@ namespace KYG_skyPower
 
         public bool isGameCleared { get; private set; } // 게임 클리어
 
-
+        public int selectWorldIndex=0;
+        public int selectStageIndex=0;
 
         //[SerializeField] private int defaultPlayerHP = 5;
         //public int playerHp { get; private set; } // 플레이어에 붙을 수도 있지만 나중에 추가 될지 몰라 주석 처리
@@ -57,7 +58,6 @@ namespace KYG_skyPower
             {
                 saveFiles[i] = new GameData();
                 SaveManager.Instance.GameLoad(ref saveFiles[i], i + 1); // 인덱스 1부터
-                Debug.Log($"{i}: {saveFiles[i].playerName}");
             }
         }
 
@@ -118,6 +118,11 @@ namespace KYG_skyPower
             Debug.Log("게임 재개");
         }
 
+        public void ResetStageIndex()
+        {
+            selectWorldIndex = 0;
+            selectStageIndex = 0;
+        }
         /*private void Update()
         {
             if (Input.GetKeyDown(KeyCode.Escape))
