@@ -37,26 +37,26 @@ namespace KYG_skyPower
             slotUIList.Clear();
 
             // 현재 인벤토리의 장비 아이템만 필터
-            var equipmentList = inventoryManagerSO.GetItemsByType(filterType);
+            var equipmentList = inventoryManagerSO.GetItemsByType(filterType); // filterType에 따라 "weapon"/"armor"/"accessory" 등 필터링
 
-            foreach (var item in equipmentList)
+            foreach (var item in equipmentList) 
             {
                 // EquipmentData만 필터
                 if (item is EquipmentData equipData)
                 {
-                    var go = Instantiate(slotPrefab, slotParent);
+                    var go = Instantiate(slotPrefab, slotParent); // 슬롯 프리팹을 부모 아래에 인스턴스화
                     slotUIList.Add(go);
 
-                    var icon = go.transform.Find("Icon").GetComponent<Image>();
-                    var nameText = go.transform.Find("NameText").GetComponent<TMP_Text>();
-                    var levelText = go.transform.Find("LevelText").GetComponent<TMP_Text>();
-                    var equipBtn = go.transform.Find("EquipButton").GetComponent<Button>();
+                    var icon = go.transform.Find("Icon").GetComponent<Image>(); // 슬롯 내 아이콘 이미지 컴포넌트
+                    var nameText = go.transform.Find("NameText").GetComponent<TMP_Text>(); // 슬롯 내 이름 텍스트 컴포넌트
+                    var levelText = go.transform.Find("LevelText").GetComponent<TMP_Text>(); // 슬롯 내 레벨 텍스트 컴포넌트
+                    var equipBtn = go.transform.Find("EquipButton").GetComponent<Button>(); // 슬롯 내 장비 버튼 컴포넌트
 
-                    icon.sprite = equipData.GetIcon();
-                    nameText.text = equipData.GetDisplayName();
-                    levelText.text = $"Lv.{equipData.Equip_Level}";
-                    equipBtn.onClick.RemoveAllListeners();
-                    equipBtn.onClick.AddListener(() => OnClickEquip(equipData));
+                    icon.sprite = equipData.GetIcon(); // 아이콘 설정 (아이콘은 Resources 폴더에서 로드)
+                    nameText.text = equipData.GetDisplayName(); // 아이템 이름 설정
+                    levelText.text = $"Lv.{equipData.Equip_Level}"; // 레벨 텍스트 설정
+                    equipBtn.onClick.RemoveAllListeners(); // 기존 리스너 제거
+                    equipBtn.onClick.AddListener(() => OnClickEquip(equipData)); // 장비 버튼 클릭 시 장비 장착 함수 호출
                 }
             }
         }
