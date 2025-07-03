@@ -6,6 +6,7 @@ namespace KYG_skyPower
     public class EquipmentData
     {
         public object Equip_Id { get; internal set; }
+        public string Equip_Type { get; internal set; }
 
         internal Sprite GetIcon()
         {
