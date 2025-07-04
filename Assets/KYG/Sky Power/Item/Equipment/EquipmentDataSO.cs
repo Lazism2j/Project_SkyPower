@@ -5,13 +5,24 @@ using KYG_skyPower;
 
 namespace KYG_skyPower
 {
+    public static class EnumUtil
+    {
+        public static T ParseEnum<T>(string value, T defaultValue = default) where T : struct
+        {
+            if (string.IsNullOrEmpty(value)) return defaultValue;
+            if (System.Enum.TryParse(value, true, out T result))
+                return result;
+            return defaultValue;
+        }
+    }
+
     public enum EquipmentGrade { Legend, Normal } // 장비 등급 (레전드, 일반 등)
     public enum EquipmentType { Weapon, Armor, Accessory } // 장비 종류 (무기, 방어구, 악세사리 등)
     public enum EquipmentSetType { 충전의, 응급의, 전장의, 맹공의, 광속의 } // 장비 세트 종류 (충전의, 응급의 등)
     public enum StatType { Atk, Hp } // 능력치 종류 (공격력, 체력 등)
     public enum EffectType { UltGage, Hp, Shild, Atk, AtkSpeed } // 효과 종류 (궁극기 게이지, 체력, 방어막 등)
 
-    [CreateAssetMenu(fileName = "EquipmentDataSO", menuName = "Equipment/EquipmentDataSO")] 
+    [CreateAssetMenu(fileName = "EquipmentDataSO", menuName = "Equipment/EquipmentDataSO")]
     public class EquipmentDataSO : ScriptableObject
     {
         public int Equip_Id; // 장비 ID (고유 식별자)
@@ -51,5 +62,28 @@ namespace KYG_skyPower
         public float Effect_Chance; // 효과 발동 확률 (0~1 사이, 0.5는 50% 확률)
 
         [TextArea] public string Effect_Desc; // 효과 설명 (에디터에서 입력 가능)
+
+        public string GetDisplayName()
+        {
+            return $"{Equip_Grade} {Equip_Name}";
+        }
+
+        public string GetStatSummary()
+        {
+            return $"{Stat_Type}: {Base_Value} (+{Per_Level}/Lv)";
+        }
+
+        // 리소스 경로 유틸
+        public Sprite GetIcon()
+        {
+            return Resources.Load<Sprite>(Equip_Img);
+        }
+
+        // 혹시 문자열로 저장한 타입 → enum 캐스팅이 필요하다면:
+        public static EquipmentType ToEquipmentType(string str)
+        {
+            return EnumUtil.ParseEnum(str, EquipmentType.Weapon);
+        }
     }
+
 }

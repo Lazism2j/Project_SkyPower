@@ -25,15 +25,7 @@ namespace KYG_skyPower
         {
             return inventory
                 .Select(x => x.itemData)
-                .Where(x => x is EquipmentDataSO ed && ed.Equip_Type == type)
-                .ToList();
-        }
-
-        public List<IInventoryItemAdapter> GetItemsBySlotType(EquipmentType slotType)
-        {
-            return inventory
-                .Select(x => x.itemData)
-                .Where(x => x is EquipmentDataSO ed && ed.GetSlotType() == slotType)
+                .Where(x => x is EquipmentDataSO ed && ed.Equip_Type.ToString().ToLower() == type.ToLower())
                 .ToList();
         }
 
@@ -57,12 +49,12 @@ namespace KYG_skyPower
         }
 
         public void ClearInventory() => inventory.Clear();
-    }
 
-    [System.Serializable]
-    public class InventorySlot
-    {
-        public IInventoryItemAdapter itemData;
-        public int count;
+        [System.Serializable]
+        public class InventorySlot
+        {
+            public IInventoryItemAdapter itemData;
+            public int count;
+        }
     }
 }

@@ -4,6 +4,8 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 using TMPro;
+using System.Linq;
+using KYG_skyPower;
 
 namespace JYL
 {
@@ -11,24 +13,34 @@ namespace JYL
     {
         // 게임매니저에서 캐릭터 정보를 불러와야 함
         private GameObject invenScroll => GetUI("InvenScroll");
+        private Transform invenContent => invenScroll.transform.Find("Viewport/Content"); // 슬롯 부모 트랜스폼
         private TMP_Text invenCharName => GetUI<TMP_Text>("InvenCharNameText");
         private TMP_Text level => GetUI<TMP_Text>("InvenCharLevelText");
         private TMP_Text hp => GetUI<TMP_Text>("InvenCharHPText");
         private TMP_Text ap => GetUI<TMP_Text>("InvenCharAPText");
         // TODO: GameManager.CharacterController[] character => for(int i = 0;i<character.Length;i++) { 인벤토리에 UI추가 }
-        
+
         // private Item[] items;
 
+        [SerializeField] private GameObject equipmentSlotPrefab; // 장비 슬롯 UI 프리팹 (SO+Save 구조로 데이터 세팅)
+
+
+        private EquipmentType _lastOpenedType; // 마지막 열린 장비 종류 (UI 갱신 용)
 
         void Start()
         {
             // 장비 클릭시 활성화
             invenScroll.SetActive(false);
+
+            GetEvent("WeaponBtn").Click += (e) => OpenInven(EquipmentType.Weapon);
+            GetEvent("ArmorBtn").Click += (e) => OpenInven(EquipmentType.Armor);
+            GetEvent("AccessoryBtn").Click += (e) => OpenInven(EquipmentType.Accessory);
+
             GetEvent("WeaponBtn").Click += OpenWPInven;
             GetEvent("WPEnhanceBtn1").Click += OpenWPEnhance;
-            GetEvent("ArmorBtn").Click += OpenAMInven;
+            //GetEvent("ArmorBtn").Click += OpenAMInven;
             GetEvent("AMEnhanceBtn2").Click += OpenAMEnhance;
-            GetEvent("AccessoryBtn").Click += OpenACInven;
+            //GetEvent("AccessoryBtn").Click += OpenACInven;
             GetEvent("ACEnhanceBtn3").Click += OpenACEnhance;
             GetEvent("CharEnhanceBtn").Click += OpenCharEnhance;
 
@@ -39,6 +51,44 @@ namespace JYL
             level.text = "24";
             hp.text = "2040";
             ap.text = "332";
+        }
+
+
+        private void OpenInven(EquipmentType type)
+        {
+            invenScroll.SetActive(true);
+            _lastOpenedType = type;
+
+            // 기존 슬롯 제거
+            foreach (Transform child in invenContent)
+                Destroy(child.gameObject);
+
+            // 장비리스트 (SO+Save 구조 → 실제 장비만)
+            var equipList = GameManager.Instance.equipmentManagerSO.runtimeEquipments
+                .Where(e => e.SO.Equip_Type == type)
+                .OrderByDescending(e => e.Save.isEquipped) // 장착중 우선
+                .ThenByDescending(e => e.Save.level)       // 레벨순 정렬
+                .ToList();
+
+            foreach (var eq in equipList)
+            {
+                var go = Instantiate(equipmentSlotPrefab, invenContent);
+                var slot = go.GetComponent<EquipmentSlotUI>();
+                // 슬롯 데이터 세팅: (SO, Save, 장착여부, 콜백)
+                slot.Set(eq.SO, eq.Save, eq.Save.isEquipped, () => OnClickEquip(eq.Save.equipId, type));
+            }
+        }
+
+        private void OnClickEquip(int equipId, EquipmentType type)
+        {
+            // 예시: 현재 선택 캐릭터ID (실제는 파티 or 선택 인덱스에 따라 결정)
+            int currentCharId = 0;
+            GameManager.Instance.EquipToCharacter(equipId, currentCharId);
+
+            // TODO: 캐릭터 능력치/장비 UI 상태 등 외부에 event로 전달
+
+            // UI 갱신
+            OpenInven(type);
         }
 
         private void OpenWPInven(PointerEventData eventData)
@@ -53,6 +103,9 @@ namespace JYL
             // 해당 UI 클릭 시, 장착중이던 장비와 교환
             // InvenManager.Instance.Add()
             // InvenManager.Instance.RemoveAt(인벤ID값으로 찾아 지우기)
+
+
+
         }
 
         // 아이템 교체 함수
