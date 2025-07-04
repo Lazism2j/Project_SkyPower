@@ -9,6 +9,17 @@ namespace KYG_skyPower
     [CreateAssetMenu(menuName = "Manager/EquipmentManagerSO")]
     public class EquipmentManagerSO : ScriptableObject
     {
+        private static EquipmentManagerSO _instance;
+        public static EquipmentManagerSO Instance
+        {
+            get
+            {
+                if (_instance == null)
+                    _instance = Resources.Load<EquipmentManagerSO>("EquipmentManagerSO");
+                return _instance;
+            }
+        }
+
         public List<EquipmentDataSO> equipmentDatabase;         // SO 테이블 (필수)
         public List<EquipmentSave> savedEquipments = new();     // 세이브파일 반영
 
