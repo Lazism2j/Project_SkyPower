@@ -12,6 +12,9 @@ namespace JYL
     public class InvenPopUp : BaseUI
     {
         // 게임매니저에서 캐릭터 정보를 불러와야 함
+
+        [SerializeField] private GameObject equipmentSlotPrefab; // 슬롯 프리팹
+
         private GameObject invenScroll => GetUI("InvenScroll");
         private Transform invenContent => invenScroll.transform.Find("Viewport/Content"); // 슬롯 부모 트랜스폼
         private TMP_Text invenCharName => GetUI<TMP_Text>("InvenCharNameText");
@@ -22,9 +25,7 @@ namespace JYL
 
         // private Item[] items;
 
-        [SerializeField] private GameObject equipmentSlotPrefab; // 장비 슬롯 UI 프리팹 (SO+Save 구조로 데이터 세팅)
-
-
+        
         private EquipmentType _lastOpenedType; // 마지막 열린 장비 종류 (UI 갱신 용)
 
         void Start()

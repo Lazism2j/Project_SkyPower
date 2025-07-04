@@ -18,8 +18,8 @@ public class EquipmentSlotUI : MonoBehaviour
 
     public void Set(EquipmentDataSO so, EquipmentSave save, bool isEquipped, System.Action onEquip)
     {
-        icon.sprite = Resources.Load<Sprite>(so.Equip_Img);
-        nameText.text = so.Equip_Name;
+            icon.sprite = so.GetIcon();
+            nameText.text = so.Equip_Name;
         levelText.text = $"Lv.{save.level}";
         equippedMark.SetActive(isEquipped);
         equipButton.interactable = !isEquipped;

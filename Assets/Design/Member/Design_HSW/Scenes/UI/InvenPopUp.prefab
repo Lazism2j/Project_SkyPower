@@ -2322,6 +2322,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bd2de4610328d274ea1bebf9a31649b6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  equipmentSlotPrefab: {fileID: 4503431352854202560, guid: 6c1988fd94f49f543ae953c96ffda9a3,
+    type: 3}
 --- !u!1 &5459767938981586661
 GameObject:
   m_ObjectHideFlags: 0

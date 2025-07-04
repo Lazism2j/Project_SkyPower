@@ -83,7 +83,7 @@ namespace KYG_skyPower
             if (index >= 0 && index < saveFiles.Length)
                 currentSaveIndex = index;
 
-            equipmentManagerSO.BuildRuntimeInventory(); // 현재 세이브 파일의 장비 정보 로드
+            
         }
 
         public void SetGameOver()
