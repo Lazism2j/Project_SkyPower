@@ -1,5 +1,505 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-9118636808811988673
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 762c262d5dc83e747b29a16089a6310f, type: 3}
+  m_Name: EquipSO_0_30
+  m_EditorClassIdentifier: 
+  Equip_Id: 30029
+  Equip_Grade: 1
+  Equip_Name: "\uB9F9\uACF5\uC758 \uD074\uB7ED \uC54C\uB808\uADF8\uB85C"
+  Equip_Type: 2
+  Equip_Set_Type: 3
+  Equip_Img: sud_ca.png
+  Equip_Maxlevel: 1
+  Equip_Upgrade_Default: 0
+  Equip_Upgrade_Plus: 0
+  Stat_Type: 0
+  Base_Value: 0
+  Per_Level: 0
+  Effect_Trigger: weapon Set_Type == amor Set_Type == accessory Set_Type
+  Effect_Timing: game start
+  Effect_Type: 3
+  Effect_Value: 0
+  Effect_Time: 0
+  Effect_Chance: 0
+  Effect_Desc: "\u2022\uAC8C\uC784 \uC2DC\uC791\uACFC \uB3D9\uC2DC\uC5D0 \uC18C\uB7C9\uC758
+    \uACF5\uACA9\uB825\uC774 \uC99D\uAC00 \uD569\uB2C8\uB2E4."
+--- !u!114 &-8828863914571263513
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 762c262d5dc83e747b29a16089a6310f, type: 3}
+  m_Name: EquipSO_0_18
+  m_EditorClassIdentifier: 
+  Equip_Id: 30017
+  Equip_Grade: 1
+  Equip_Name: "\uC751\uAE09\uC758 Dual-core"
+  Equip_Type: 1
+  Equip_Set_Type: 1
+  Equip_Img: emg_dct.png
+  Equip_Maxlevel: 5
+  Equip_Upgrade_Default: 1000
+  Equip_Upgrade_Plus: 1000
+  Stat_Type: 1
+  Base_Value: 50
+  Per_Level: 3
+  Effect_Trigger: '-'
+  Effect_Timing: '-'
+  Effect_Type: 0
+  Effect_Value: 0
+  Effect_Time: 0
+  Effect_Chance: 0
+  Effect_Desc: '-'
+--- !u!114 &-8809829530309433159
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 762c262d5dc83e747b29a16089a6310f, type: 3}
+  m_Name: EquipSO_0_4
+  m_EditorClassIdentifier: 
+  Equip_Id: 30003
+  Equip_Grade: 0
+  Equip_Name: "\uC804\uC7A5\uC758 \uC624\uBC84\uB4DC\uB77C\uC774\uBE0C"
+  Equip_Type: 0
+  Equip_Set_Type: 2
+  Equip_Img: bat_ovd.png
+  Equip_Maxlevel: 5
+  Equip_Upgrade_Default: 1000
+  Equip_Upgrade_Plus: 1000
+  Stat_Type: 0
+  Base_Value: 20
+  Per_Level: 10
+  Effect_Trigger: '-'
+  Effect_Timing: '-'
+  Effect_Type: 0
+  Effect_Value: 0
+  Effect_Time: 0
+  Effect_Chance: 0
+  Effect_Desc: '-'
+--- !u!114 &-6577165025895952097
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 762c262d5dc83e747b29a16089a6310f, type: 3}
+  m_Name: EquipSO_0_12
+  m_EditorClassIdentifier: 
+  Equip_Id: 30011
+  Equip_Grade: 0
+  Equip_Name: "\uCDA9\uC804\uC758 Octa-core"
+  Equip_Type: 1
+  Equip_Set_Type: 0
+  Equip_Img: chg_oct.png
+  Equip_Maxlevel: 5
+  Equip_Upgrade_Default: 1000
+  Equip_Upgrade_Plus: 1000
+  Stat_Type: 1
+  Base_Value: 100
+  Per_Level: 6
+  Effect_Trigger: '-'
+  Effect_Timing: '-'
+  Effect_Type: 0
+  Effect_Value: 0
+  Effect_Time: 0
+  Effect_Chance: 0
+  Effect_Desc: '-'
+--- !u!114 &-5125295095546279013
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 762c262d5dc83e747b29a16089a6310f, type: 3}
+  m_Name: EquipSO_0_19
+  m_EditorClassIdentifier: 
+  Equip_Id: 30018
+  Equip_Grade: 1
+  Equip_Name: "\uC804\uC7A5\uC758 Dual-core"
+  Equip_Type: 1
+  Equip_Set_Type: 2
+  Equip_Img: bat_dct.png
+  Equip_Maxlevel: 5
+  Equip_Upgrade_Default: 1000
+  Equip_Upgrade_Plus: 1000
+  Stat_Type: 1
+  Base_Value: 50
+  Per_Level: 3
+  Effect_Trigger: '-'
+  Effect_Timing: '-'
+  Effect_Type: 0
+  Effect_Value: 0
+  Effect_Time: 0
+  Effect_Chance: 0
+  Effect_Desc: '-'
+--- !u!114 &-5084430444233376633
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 762c262d5dc83e747b29a16089a6310f, type: 3}
+  m_Name: EquipSO_0_1
+  m_EditorClassIdentifier: 
+  Equip_Id: 0
+  Equip_Grade: 0
+  Equip_Name: Equip_Name
+  Equip_Type: 0
+  Equip_Set_Type: 0
+  Equip_Img: Equip_Img
+  Equip_Maxlevel: 0
+  Equip_Upgrade_Default: 0
+  Equip_Upgrade_Plus: 0
+  Stat_Type: 0
+  Base_Value: 0
+  Per_Level: 0
+  Effect_Trigger: Effect_Trigger
+  Effect_Timing: Effect_Timing
+  Effect_Type: 0
+  Effect_Value: 0
+  Effect_Time: 0
+  Effect_Chance: 0
+  Effect_Desc: Effect_Desc
+--- !u!114 &-4360386502965032510
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 762c262d5dc83e747b29a16089a6310f, type: 3}
+  m_Name: EquipSO_0_29
+  m_EditorClassIdentifier: 
+  Equip_Id: 30028
+  Equip_Grade: 1
+  Equip_Name: "\uC804\uC7A5\uC758 \uD074\uB7ED \uC54C\uB808\uADF8\uB85C"
+  Equip_Type: 2
+  Equip_Set_Type: 2
+  Equip_Img: bat_ca.png
+  Equip_Maxlevel: 1
+  Equip_Upgrade_Default: 0
+  Equip_Upgrade_Plus: 0
+  Stat_Type: 0
+  Base_Value: 0
+  Per_Level: 0
+  Effect_Trigger: weapon Set_Type == amor Set_Type == accessory Set_Type
+  Effect_Timing: kill enemy
+  Effect_Type: 2
+  Effect_Value: 1
+  Effect_Time: 0
+  Effect_Chance: 0
+  Effect_Desc: "\u2022\uBAB9 \uCC98\uCE58 \uC2DC \uC77C\uC815 \uD655\uB960\uB85C
+    \uC274\uB4DC\uAC00 \uC0DD\uC131 \uB429\uB2C8\uB2E4."
+--- !u!114 &-4299587222052162165
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 762c262d5dc83e747b29a16089a6310f, type: 3}
+  m_Name: EquipSO_0_13
+  m_EditorClassIdentifier: 
+  Equip_Id: 30012
+  Equip_Grade: 0
+  Equip_Name: "\uC751\uAE09\uC758 Octa-core"
+  Equip_Type: 1
+  Equip_Set_Type: 1
+  Equip_Img: emg_oct.png
+  Equip_Maxlevel: 5
+  Equip_Upgrade_Default: 1000
+  Equip_Upgrade_Plus: 1000
+  Stat_Type: 1
+  Base_Value: 100
+  Per_Level: 6
+  Effect_Trigger: '-'
+  Effect_Timing: '-'
+  Effect_Type: 0
+  Effect_Value: 0
+  Effect_Time: 0
+  Effect_Chance: 0
+  Effect_Desc: '-'
+--- !u!114 &-3655988970919134009
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 762c262d5dc83e747b29a16089a6310f, type: 3}
+  m_Name: EquipSO_0_15
+  m_EditorClassIdentifier: 
+  Equip_Id: 30014
+  Equip_Grade: 0
+  Equip_Name: "\uB9F9\uACF5\uC758 Octa-core"
+  Equip_Type: 1
+  Equip_Set_Type: 3
+  Equip_Img: sud_oct.png
+  Equip_Maxlevel: 5
+  Equip_Upgrade_Default: 1000
+  Equip_Upgrade_Plus: 1000
+  Stat_Type: 1
+  Base_Value: 100
+  Per_Level: 6
+  Effect_Trigger: '-'
+  Effect_Timing: '-'
+  Effect_Type: 0
+  Effect_Value: 0
+  Effect_Time: 0
+  Effect_Chance: 0
+  Effect_Desc: '-'
+--- !u!114 &-3139040375886121128
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 762c262d5dc83e747b29a16089a6310f, type: 3}
+  m_Name: EquipSO_0_11
+  m_EditorClassIdentifier: 
+  Equip_Id: 30010
+  Equip_Grade: 1
+  Equip_Name: "\uAD11\uC18D\uC758 \uB514\uC2A4\uD1A0\uC158"
+  Equip_Type: 0
+  Equip_Set_Type: 4
+  Equip_Img: lit_dis.png
+  Equip_Maxlevel: 5
+  Equip_Upgrade_Default: 1000
+  Equip_Upgrade_Plus: 1000
+  Stat_Type: 0
+  Base_Value: 10
+  Per_Level: 5
+  Effect_Trigger: '-'
+  Effect_Timing: '-'
+  Effect_Type: 0
+  Effect_Value: 0
+  Effect_Time: 0
+  Effect_Chance: 0
+  Effect_Desc: '-'
+--- !u!114 &-2596614656593109294
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 762c262d5dc83e747b29a16089a6310f, type: 3}
+  m_Name: EquipSO_0_16
+  m_EditorClassIdentifier: 
+  Equip_Id: 30015
+  Equip_Grade: 0
+  Equip_Name: "\uAD11\uC18D\uC758 Octa-core"
+  Equip_Type: 1
+  Equip_Set_Type: 4
+  Equip_Img: lit_oct.png
+  Equip_Maxlevel: 5
+  Equip_Upgrade_Default: 1000
+  Equip_Upgrade_Plus: 1000
+  Stat_Type: 1
+  Base_Value: 100
+  Per_Level: 6
+  Effect_Trigger: '-'
+  Effect_Timing: '-'
+  Effect_Type: 0
+  Effect_Value: 0
+  Effect_Time: 0
+  Effect_Chance: 0
+  Effect_Desc: '-'
+--- !u!114 &-1862590068643333208
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 762c262d5dc83e747b29a16089a6310f, type: 3}
+  m_Name: EquipSO_0_9
+  m_EditorClassIdentifier: 
+  Equip_Id: 30008
+  Equip_Grade: 1
+  Equip_Name: "\uC804\uC7A5\uC758 \uB514\uC2A4\uD1A0\uC158"
+  Equip_Type: 0
+  Equip_Set_Type: 2
+  Equip_Img: bat_dis.png
+  Equip_Maxlevel: 5
+  Equip_Upgrade_Default: 1000
+  Equip_Upgrade_Plus: 1000
+  Stat_Type: 0
+  Base_Value: 10
+  Per_Level: 5
+  Effect_Trigger: '-'
+  Effect_Timing: '-'
+  Effect_Type: 0
+  Effect_Value: 0
+  Effect_Time: 0
+  Effect_Chance: 0
+  Effect_Desc: '-'
+--- !u!114 &-1749159593965867120
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 762c262d5dc83e747b29a16089a6310f, type: 3}
+  m_Name: EquipSO_0_7
+  m_EditorClassIdentifier: 
+  Equip_Id: 30006
+  Equip_Grade: 1
+  Equip_Name: "\uCDA9\uC804\uC758 \uB514\uC2A4\uD1A0\uC158"
+  Equip_Type: 0
+  Equip_Set_Type: 0
+  Equip_Img: chg_dis.png
+  Equip_Maxlevel: 5
+  Equip_Upgrade_Default: 1000
+  Equip_Upgrade_Plus: 1000
+  Stat_Type: 0
+  Base_Value: 10
+  Per_Level: 5
+  Effect_Trigger: '-'
+  Effect_Timing: '-'
+  Effect_Type: 0
+  Effect_Value: 0
+  Effect_Time: 0
+  Effect_Chance: 0
+  Effect_Desc: '-'
+--- !u!114 &-1510853460367990319
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 762c262d5dc83e747b29a16089a6310f, type: 3}
+  m_Name: EquipSO_0_6
+  m_EditorClassIdentifier: 
+  Equip_Id: 30005
+  Equip_Grade: 0
+  Equip_Name: "\uAD11\uC18D\uC758 \uC624\uBC84\uB4DC\uB77C\uC774\uBE0C"
+  Equip_Type: 0
+  Equip_Set_Type: 4
+  Equip_Img: lit_ovd.png
+  Equip_Maxlevel: 5
+  Equip_Upgrade_Default: 1000
+  Equip_Upgrade_Plus: 1000
+  Stat_Type: 0
+  Base_Value: 20
+  Per_Level: 10
+  Effect_Trigger: '-'
+  Effect_Timing: '-'
+  Effect_Type: 0
+  Effect_Value: 0
+  Effect_Time: 0
+  Effect_Chance: 0
+  Effect_Desc: '-'
+--- !u!114 &-1323697813816919823
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 762c262d5dc83e747b29a16089a6310f, type: 3}
+  m_Name: EquipSO_0_22
+  m_EditorClassIdentifier: 
+  Equip_Id: 30021
+  Equip_Grade: 0
+  Equip_Name: "\uCDA9\uC804\uC758 \uD074\uB7ED \uD504\uB808\uC2A4\uD1A0"
+  Equip_Type: 2
+  Equip_Set_Type: 0
+  Equip_Img: chg_cp.png
+  Equip_Maxlevel: 1
+  Equip_Upgrade_Default: 0
+  Equip_Upgrade_Plus: 0
+  Stat_Type: 0
+  Base_Value: 0
+  Per_Level: 0
+  Effect_Trigger: weapon Set_Type == amor Set_Type == accessory Set_Type
+  Effect_Timing: game start
+  Effect_Type: 0
+  Effect_Value: 0
+  Effect_Time: 0
+  Effect_Chance: 0
+  Effect_Desc: "\u2022\uAC8C\uC784 \uC2DC\uC791\uACFC \uC885\uB8CC \uAE4C\uC9C0 \uC18C\uB7C9\uC758
+    \uAD81\uADF9\uAE30 \uAC8C\uC774\uC9C0\uAC00 \uC9C0\uC18D\uC801\uC73C\uB85C \uC99D\uAC00
+    \uD569\uB2C8\uB2E4"
+--- !u!114 &-223696044698179229
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 762c262d5dc83e747b29a16089a6310f, type: 3}
+  m_Name: EquipSO_0_2
+  m_EditorClassIdentifier: 
+  Equip_Id: 30001
+  Equip_Grade: 0
+  Equip_Name: "\uCDA9\uC804\uC758 \uC624\uBC84\uB4DC\uB77C\uC774\uBE0C"
+  Equip_Type: 0
+  Equip_Set_Type: 0
+  Equip_Img: chg_ovd.png
+  Equip_Maxlevel: 5
+  Equip_Upgrade_Default: 1000
+  Equip_Upgrade_Plus: 1000
+  Stat_Type: 0
+  Base_Value: 20
+  Per_Level: 10
+  Effect_Trigger: '-'
+  Effect_Timing: '-'
+  Effect_Type: 0
+  Effect_Value: 0
+  Effect_Time: 0
+  Effect_Chance: 0
+  Effect_Desc: '-'
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9,578 +509,544 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ec4efd708b3b7214ba99a6c0083caec3, type: 3}
+  m_Script: {fileID: 11500000, guid: 6f6d886e6c61f404b84ed538d78f41d9, type: 3}
   m_Name: EquipmentTableSO
   m_EditorClassIdentifier: 
   equipmentList:
-  - Equip_Id: 30001
-    Equip_Grade: Legend
-    Equip_Name: "\uCDA9\uC804\uC758 \uC624\uBC84\uB4DC\uB77C\uC774\uBE0C"
-    Equip_Type: weapon
-    Equip_Set_Type: "\uCDA9\uC804\uC758"
-    Equip_Img: chg_ovd.png
-    Equip_Level: 1
-    Equip_Maxlevel: 5
-    Equip_Upgrade_Default: 1000
-    Equip_Upgrade_Plus: 1000
-    Stat_Type: Atk
-    Base_Value: 20
-    Per_Level: 10
-    Effect_Trigger: '-'
-    Effect_Timing: '-'
-    Effect_Type: '-'
-    Effect_Value: 0
-    Effect_Time: 0
-    Effect_Chance: 0
-    Effect_Desc: '-'
-  - Equip_Id: 30002
-    Equip_Grade: Legend
-    Equip_Name: "\uC751\uAE09\uC758 \uC624\uBC84\uB4DC\uB77C\uC774\uBE0C"
-    Equip_Type: weapon
-    Equip_Set_Type: "\uC751\uAE09\uC758"
-    Equip_Img: emg_ovd.png
-    Equip_Level: 1
-    Equip_Maxlevel: 5
-    Equip_Upgrade_Default: 1000
-    Equip_Upgrade_Plus: 1000
-    Stat_Type: Atk
-    Base_Value: 20
-    Per_Level: 10
-    Effect_Trigger: '-'
-    Effect_Timing: '-'
-    Effect_Type: '-'
-    Effect_Value: 0
-    Effect_Time: 0
-    Effect_Chance: 0
-    Effect_Desc: '-'
-  - Equip_Id: 30003
-    Equip_Grade: Legend
-    Equip_Name: "\uC804\uC7A5\uC758 \uC624\uBC84\uB4DC\uB77C\uC774\uBE0C"
-    Equip_Type: weapon
-    Equip_Set_Type: "\uC804\uC7A5\uC758"
-    Equip_Img: bat_ovd.png
-    Equip_Level: 1
-    Equip_Maxlevel: 5
-    Equip_Upgrade_Default: 1000
-    Equip_Upgrade_Plus: 1000
-    Stat_Type: Atk
-    Base_Value: 20
-    Per_Level: 10
-    Effect_Trigger: '-'
-    Effect_Timing: '-'
-    Effect_Type: '-'
-    Effect_Value: 0
-    Effect_Time: 0
-    Effect_Chance: 0
-    Effect_Desc: '-'
-  - Equip_Id: 30004
-    Equip_Grade: Legend
-    Equip_Name: "\uB9F9\uACF5\uC758 \uC624\uBC84\uB4DC\uB77C\uC774\uBE0C"
-    Equip_Type: weapon
-    Equip_Set_Type: "\uB9F9\uACF5\uC758"
-    Equip_Img: sud_ovd.png
-    Equip_Level: 1
-    Equip_Maxlevel: 5
-    Equip_Upgrade_Default: 1000
-    Equip_Upgrade_Plus: 1000
-    Stat_Type: Atk
-    Base_Value: 20
-    Per_Level: 10
-    Effect_Trigger: '-'
-    Effect_Timing: '-'
-    Effect_Type: '-'
-    Effect_Value: 0
-    Effect_Time: 0
-    Effect_Chance: 0
-    Effect_Desc: '-'
-  - Equip_Id: 30005
-    Equip_Grade: Legend
-    Equip_Name: "\uAD11\uC18D\uC758 \uC624\uBC84\uB4DC\uB77C\uC774\uBE0C"
-    Equip_Type: weapon
-    Equip_Set_Type: "\uAD11\uC18D\uC758"
-    Equip_Img: lit_ovd.png
-    Equip_Level: 1
-    Equip_Maxlevel: 5
-    Equip_Upgrade_Default: 1000
-    Equip_Upgrade_Plus: 1000
-    Stat_Type: Atk
-    Base_Value: 20
-    Per_Level: 10
-    Effect_Trigger: '-'
-    Effect_Timing: '-'
-    Effect_Type: '-'
-    Effect_Value: 0
-    Effect_Time: 0
-    Effect_Chance: 0
-    Effect_Desc: '-'
-  - Equip_Id: 30006
-    Equip_Grade: Normal
-    Equip_Name: "\uCDA9\uC804\uC758 \uB514\uC2A4\uD1A0\uC158"
-    Equip_Type: weapon
-    Equip_Set_Type: "\uCDA9\uC804\uC758"
-    Equip_Img: chg_dis.png
-    Equip_Level: 1
-    Equip_Maxlevel: 5
-    Equip_Upgrade_Default: 1000
-    Equip_Upgrade_Plus: 1000
-    Stat_Type: Atk
-    Base_Value: 10
-    Per_Level: 5
-    Effect_Trigger: '-'
-    Effect_Timing: '-'
-    Effect_Type: '-'
-    Effect_Value: 0
-    Effect_Time: 0
-    Effect_Chance: 0
-    Effect_Desc: '-'
-  - Equip_Id: 30007
-    Equip_Grade: Normal
-    Equip_Name: "\uC751\uAE09\uC758 \uB514\uC2A4\uD1A0\uC158"
-    Equip_Type: weapon
-    Equip_Set_Type: "\uC751\uAE09\uC758"
-    Equip_Img: emg_dis.png
-    Equip_Level: 1
-    Equip_Maxlevel: 5
-    Equip_Upgrade_Default: 1000
-    Equip_Upgrade_Plus: 1000
-    Stat_Type: Atk
-    Base_Value: 10
-    Per_Level: 5
-    Effect_Trigger: '-'
-    Effect_Timing: '-'
-    Effect_Type: '-'
-    Effect_Value: 0
-    Effect_Time: 0
-    Effect_Chance: 0
-    Effect_Desc: '-'
-  - Equip_Id: 30008
-    Equip_Grade: Normal
-    Equip_Name: "\uC804\uC7A5\uC758 \uB514\uC2A4\uD1A0\uC158"
-    Equip_Type: weapon
-    Equip_Set_Type: "\uC804\uC7A5\uC758"
-    Equip_Img: bat_dis.png
-    Equip_Level: 1
-    Equip_Maxlevel: 5
-    Equip_Upgrade_Default: 1000
-    Equip_Upgrade_Plus: 1000
-    Stat_Type: Atk
-    Base_Value: 10
-    Per_Level: 5
-    Effect_Trigger: '-'
-    Effect_Timing: '-'
-    Effect_Type: '-'
-    Effect_Value: 0
-    Effect_Time: 0
-    Effect_Chance: 0
-    Effect_Desc: '-'
-  - Equip_Id: 30009
-    Equip_Grade: Normal
-    Equip_Name: "\uB9F9\uACF5\uC758 \uB514\uC2A4\uD1A0\uC158"
-    Equip_Type: weapon
-    Equip_Set_Type: "\uB9F9\uACF5\uC758"
-    Equip_Img: sud_dis.png
-    Equip_Level: 1
-    Equip_Maxlevel: 5
-    Equip_Upgrade_Default: 1000
-    Equip_Upgrade_Plus: 1000
-    Stat_Type: Atk
-    Base_Value: 10
-    Per_Level: 5
-    Effect_Trigger: '-'
-    Effect_Timing: '-'
-    Effect_Type: '-'
-    Effect_Value: 0
-    Effect_Time: 0
-    Effect_Chance: 0
-    Effect_Desc: '-'
-  - Equip_Id: 30010
-    Equip_Grade: Normal
-    Equip_Name: "\uAD11\uC18D\uC758 \uB514\uC2A4\uD1A0\uC158"
-    Equip_Type: weapon
-    Equip_Set_Type: "\uAD11\uC18D\uC758"
-    Equip_Img: lit_dis.png
-    Equip_Level: 1
-    Equip_Maxlevel: 5
-    Equip_Upgrade_Default: 1000
-    Equip_Upgrade_Plus: 1000
-    Stat_Type: Atk
-    Base_Value: 10
-    Per_Level: 5
-    Effect_Trigger: '-'
-    Effect_Timing: '-'
-    Effect_Type: '-'
-    Effect_Value: 0
-    Effect_Time: 0
-    Effect_Chance: 0
-    Effect_Desc: '-'
-  - Equip_Id: 30011
-    Equip_Grade: Legend
-    Equip_Name: "\uCDA9\uC804\uC758 Octa-core"
-    Equip_Type: armor
-    Equip_Set_Type: "\uCDA9\uC804\uC758"
-    Equip_Img: chg_oct.png
-    Equip_Level: 1
-    Equip_Maxlevel: 5
-    Equip_Upgrade_Default: 1000
-    Equip_Upgrade_Plus: 1000
-    Stat_Type: Hp
-    Base_Value: 100
-    Per_Level: 6
-    Effect_Trigger: '-'
-    Effect_Timing: '-'
-    Effect_Type: '-'
-    Effect_Value: 0
-    Effect_Time: 0
-    Effect_Chance: 0
-    Effect_Desc: '-'
-  - Equip_Id: 30012
-    Equip_Grade: Legend
-    Equip_Name: "\uC751\uAE09\uC758 Octa-core"
-    Equip_Type: armor
-    Equip_Set_Type: "\uC751\uAE09\uC758"
-    Equip_Img: emg_oct.png
-    Equip_Level: 1
-    Equip_Maxlevel: 5
-    Equip_Upgrade_Default: 1000
-    Equip_Upgrade_Plus: 1000
-    Stat_Type: Hp
-    Base_Value: 100
-    Per_Level: 6
-    Effect_Trigger: '-'
-    Effect_Timing: '-'
-    Effect_Type: '-'
-    Effect_Value: 0
-    Effect_Time: 0
-    Effect_Chance: 0
-    Effect_Desc: '-'
-  - Equip_Id: 30013
-    Equip_Grade: Legend
-    Equip_Name: "\uC804\uC7A5\uC758 Octa-core"
-    Equip_Type: armor
-    Equip_Set_Type: "\uC804\uC7A5\uC758"
-    Equip_Img: bat_oct.png
-    Equip_Level: 1
-    Equip_Maxlevel: 5
-    Equip_Upgrade_Default: 1000
-    Equip_Upgrade_Plus: 1000
-    Stat_Type: Hp
-    Base_Value: 100
-    Per_Level: 6
-    Effect_Trigger: '-'
-    Effect_Timing: '-'
-    Effect_Type: '-'
-    Effect_Value: 0
-    Effect_Time: 0
-    Effect_Chance: 0
-    Effect_Desc: '-'
-  - Equip_Id: 30014
-    Equip_Grade: Legend
-    Equip_Name: "\uB9F9\uACF5\uC758 Octa-core"
-    Equip_Type: armor
-    Equip_Set_Type: "\uB9F9\uACF5\uC758"
-    Equip_Img: sud_oct.png
-    Equip_Level: 1
-    Equip_Maxlevel: 5
-    Equip_Upgrade_Default: 1000
-    Equip_Upgrade_Plus: 1000
-    Stat_Type: Hp
-    Base_Value: 100
-    Per_Level: 6
-    Effect_Trigger: '-'
-    Effect_Timing: '-'
-    Effect_Type: '-'
-    Effect_Value: 0
-    Effect_Time: 0
-    Effect_Chance: 0
-    Effect_Desc: '-'
-  - Equip_Id: 30015
-    Equip_Grade: Legend
-    Equip_Name: "\uAD11\uC18D\uC758 Octa-core"
-    Equip_Type: armor
-    Equip_Set_Type: "\uAD11\uC18D\uC758"
-    Equip_Img: lit_oct.png
-    Equip_Level: 1
-    Equip_Maxlevel: 5
-    Equip_Upgrade_Default: 1000
-    Equip_Upgrade_Plus: 1000
-    Stat_Type: Hp
-    Base_Value: 100
-    Per_Level: 6
-    Effect_Trigger: '-'
-    Effect_Timing: '-'
-    Effect_Type: '-'
-    Effect_Value: 0
-    Effect_Time: 0
-    Effect_Chance: 0
-    Effect_Desc: '-'
-  - Equip_Id: 30016
-    Equip_Grade: Normal
-    Equip_Name: "\uCDA9\uC804\uC758 Dual-core"
-    Equip_Type: armor
-    Equip_Set_Type: "\uCDA9\uC804\uC758"
-    Equip_Img: chg_dct.png
-    Equip_Level: 1
-    Equip_Maxlevel: 5
-    Equip_Upgrade_Default: 1000
-    Equip_Upgrade_Plus: 1000
-    Stat_Type: Hp
-    Base_Value: 50
-    Per_Level: 3
-    Effect_Trigger: '-'
-    Effect_Timing: '-'
-    Effect_Type: '-'
-    Effect_Value: 0
-    Effect_Time: 0
-    Effect_Chance: 0
-    Effect_Desc: '-'
-  - Equip_Id: 30017
-    Equip_Grade: Normal
-    Equip_Name: "\uC751\uAE09\uC758 Dual-core"
-    Equip_Type: armor
-    Equip_Set_Type: "\uC751\uAE09\uC758"
-    Equip_Img: emg_dct.png
-    Equip_Level: 1
-    Equip_Maxlevel: 5
-    Equip_Upgrade_Default: 1000
-    Equip_Upgrade_Plus: 1000
-    Stat_Type: Hp
-    Base_Value: 50
-    Per_Level: 3
-    Effect_Trigger: '-'
-    Effect_Timing: '-'
-    Effect_Type: '-'
-    Effect_Value: 0
-    Effect_Time: 0
-    Effect_Chance: 0
-    Effect_Desc: '-'
-  - Equip_Id: 30018
-    Equip_Grade: Normal
-    Equip_Name: "\uC804\uC7A5\uC758 Dual-core"
-    Equip_Type: armor
-    Equip_Set_Type: "\uC804\uC7A5\uC758"
-    Equip_Img: bat_dct.png
-    Equip_Level: 1
-    Equip_Maxlevel: 5
-    Equip_Upgrade_Default: 1000
-    Equip_Upgrade_Plus: 1000
-    Stat_Type: Hp
-    Base_Value: 50
-    Per_Level: 3
-    Effect_Trigger: '-'
-    Effect_Timing: '-'
-    Effect_Type: '-'
-    Effect_Value: 0
-    Effect_Time: 0
-    Effect_Chance: 0
-    Effect_Desc: '-'
-  - Equip_Id: 30019
-    Equip_Grade: Normal
-    Equip_Name: "\uB9F9\uACF5\uC758 Dual-core"
-    Equip_Type: armor
-    Equip_Set_Type: "\uB9F9\uACF5\uC758"
-    Equip_Img: sud_dct.png
-    Equip_Level: 1
-    Equip_Maxlevel: 5
-    Equip_Upgrade_Default: 1000
-    Equip_Upgrade_Plus: 1000
-    Stat_Type: Hp
-    Base_Value: 50
-    Per_Level: 3
-    Effect_Trigger: '-'
-    Effect_Timing: '-'
-    Effect_Type: '-'
-    Effect_Value: 0
-    Effect_Time: 0
-    Effect_Chance: 0
-    Effect_Desc: '-'
-  - Equip_Id: 30020
-    Equip_Grade: Normal
-    Equip_Name: "\uAD11\uC18D\uC758 Dual-core"
-    Equip_Type: armor
-    Equip_Set_Type: "\uAD11\uC18D\uC758"
-    Equip_Img: lit_dct.png
-    Equip_Level: 1
-    Equip_Maxlevel: 5
-    Equip_Upgrade_Default: 1000
-    Equip_Upgrade_Plus: 1000
-    Stat_Type: Hp
-    Base_Value: 50
-    Per_Level: 3
-    Effect_Trigger: '-'
-    Effect_Timing: '-'
-    Effect_Type: '-'
-    Effect_Value: 0
-    Effect_Time: 0
-    Effect_Chance: 0
-    Effect_Desc: '-'
-  - Equip_Id: 30021
-    Equip_Grade: Legend
-    Equip_Name: "\uCDA9\uC804\uC758 \uD074\uB7ED \uD504\uB808\uC2A4\uD1A0"
-    Equip_Type: accessory
-    Equip_Set_Type: "\uCDA9\uC804\uC758"
-    Equip_Img: chg_cp.png
-    Equip_Level: 1
-    Equip_Maxlevel: 1
-    Equip_Upgrade_Default: 0
-    Equip_Upgrade_Plus: 0
-    Stat_Type: '-'
-    Base_Value: 0
-    Per_Level: 0
-    Effect_Trigger: weapon Set_Type == amor Set_Type == accessory Set_Type
-    Effect_Timing: game start
-    Effect_Type: ult  gage
-    Effect_Value: 0
-    Effect_Time: 0
-    Effect_Chance: 0
-    Effect_Desc: "\u2022\uAC8C\uC784 \uC2DC\uC791\uACFC \uC885\uB8CC \uAE4C\uC9C0
-      \uC18C\uB7C9\uC758 \uAD81\uADF9\uAE30 \uAC8C\uC774\uC9C0\uAC00 \uC9C0\uC18D\uC801\uC73C\uB85C
-      \uC99D\uAC00 \uD569\uB2C8\uB2E4"
-  - Equip_Id: 30022
-    Equip_Grade: Legend
-    Equip_Name: "\uC751\uAE09\uC758 \uD074\uB7ED \uD504\uB808\uC2A4\uD1A0"
-    Equip_Type: accessory
-    Equip_Set_Type: "\uC751\uAE09\uC758"
-    Equip_Img: emg_cp.png
-    Equip_Level: 1
-    Equip_Maxlevel: 1
-    Equip_Upgrade_Default: 0
-    Equip_Upgrade_Plus: 0
-    Stat_Type: '-'
-    Base_Value: 0
-    Per_Level: 0
-    Effect_Trigger: weapon Set_Type == amor Set_Type == accessory Set_Type
-    Effect_Timing: using parrying
-    Effect_Type: hp
-    Effect_Value: 0
-    Effect_Time: 0
-    Effect_Chance: 0
-    Effect_Desc: "\u2022\uD328\uB9C1 \uBC1C\uB3D9 \uC2DC \uCCB4\uB825\uC744 \uD68C\uBCF5
-      \uD569\uB2C8\uB2E4."
-  - Equip_Id: 30023
-    Equip_Grade: Legend
-    Equip_Name: "\uC804\uC7A5\uC758 \uD074\uB7ED \uD504\uB808\uC2A4\uD1A0"
-    Equip_Type: accessory
-    Equip_Set_Type: "\uC804\uC7A5\uC758"
-    Equip_Img: bat_cp.png
-    Equip_Level: 1
-    Equip_Maxlevel: 1
-    Equip_Upgrade_Default: 0
-    Equip_Upgrade_Plus: 0
-    Stat_Type: '-'
-    Base_Value: 0
-    Per_Level: 0
-    Effect_Trigger: weapon Set_Type == amor Set_Type == accessory Set_Type
-    Effect_Timing: kill enemy
-    Effect_Type: shild
-    Effect_Value: 1
-    Effect_Time: 0
-    Effect_Chance: 0
-    Effect_Desc: "\u2022\uBAB9 \uCC98\uCE58 \uC2DC \uC77C\uC815 \uD655\uB960\uB85C
-      \uC274\uB4DC\uAC00 \uC0DD\uC131 \uB429\uB2C8\uB2E4."
-  - Equip_Id: 30024
-    Equip_Grade: Legend
-    Equip_Name: "\uB9F9\uACF5\uC758 \uD074\uB7ED \uD504\uB808\uC2A4\uD1A0"
-    Equip_Type: accessory
-    Equip_Set_Type: "\uB9F9\uACF5\uC758"
-    Equip_Img: sud_cp.png
-    Equip_Level: 1
-    Equip_Maxlevel: 1
-    Equip_Upgrade_Default: 0
-    Equip_Upgrade_Plus: 0
-    Stat_Type: '-'
-    Base_Value: 0
-    Per_Level: 0
-    Effect_Trigger: weapon Set_Type == amor Set_Type == accessory Set_Type
-    Effect_Timing: game start
-    Effect_Type: atk
-    Effect_Value: 0
-    Effect_Time: 0
-    Effect_Chance: 0
-    Effect_Desc: "\u2022\uAC8C\uC784 \uC2DC\uC791\uACFC \uB3D9\uC2DC\uC5D0 \uC18C\uB7C9\uC758
-      \uACF5\uACA9\uB825\uC774 \uC99D\uAC00 \uD569\uB2C8\uB2E4."
-  - Equip_Id: 30025
-    Equip_Grade: Legend
-    Equip_Name: "\uAD11\uC18D\uC758 \uD074\uB7ED \uD504\uB808\uC2A4\uD1A0"
-    Equip_Type: accessory
-    Equip_Set_Type: "\uAD11\uC18D\uC758"
-    Equip_Img: lit_cp.png
-    Equip_Level: 1
-    Equip_Maxlevel: 1
-    Equip_Upgrade_Default: 0
-    Equip_Upgrade_Plus: 0
-    Stat_Type: '-'
-    Base_Value: 0
-    Per_Level: 0
-    Effect_Trigger: weapon Set_Type == amor Set_Type == accessory Set_Type
-    Effect_Timing: using  ult
-    Effect_Type: atk speed
-    Effect_Value: 1
-    Effect_Time: 0
-    Effect_Chance: 0
-    Effect_Desc: "\u2022\uAD81\uADF9\uAE30 \uBC1C\uB3D9 \uC2DC \uC9E7\uC740 \uC2DC\uAC04
-      \uB3D9\uC548 \uB300\uB7C9\uC758 \uACF5\uACA9 \uC18D\uB3C4\uAC00 \uC0C1\uC2B9
-      \uD569\uB2C8\uB2E4."
-  - Equip_Id: 30026
-    Equip_Grade: Normal
-    Equip_Name: "\uCDA9\uC804\uC758 \uD074\uB7ED \uC54C\uB808\uADF8\uB85C"
-    Equip_Type: accessory
-    Equip_Set_Type: "\uCDA9\uC804\uC758"
-    Equip_Img: chg_ca.png
-    Equip_Level: 1
-    Equip_Maxlevel: 1
-    Equip_Upgrade_Default: 0
-    Equip_Upgrade_Plus: 0
-    Stat_Type: '-'
-    Base_Value: 0
-    Per_Level: 0
-    Effect_Trigger: weapon Set_Type == amor Set_Type == accessory Set_Type
-    Effect_Timing: game start
-    Effect_Type: ult  gage
-    Effect_Value: 0
-    Effect_Time: 0
-    Effect_Chance: 0
-    Effect_Desc: "\u2022\uAC8C\uC784 \uC2DC\uC791\uACFC \uC885\uB8CC \uAE4C\uC9C0
-      \uC18C\uB7C9\uC758 \uAD81\uADF9\uAE30 \uAC8C\uC774\uC9C0\uAC00 \uC9C0\uC18D\uC801\uC73C\uB85C
-      \uC99D\uAC00 \uD569\uB2C8\uB2E4"
-  - Equip_Id: 30027
-    Equip_Grade: Normal
-    Equip_Name: "\uC751\uAE09\uC758 \uD074\uB7ED \uC54C\uB808\uADF8\uB85C"
-    Equip_Type: accessory
-    Equip_Set_Type: "\uC751\uAE09\uC758"
-    Equip_Img: emg_ca.png
-    Equip_Level: 1
-    Equip_Maxlevel: 1
-    Equip_Upgrade_Default: 0
-    Equip_Upgrade_Plus: 0
-    Stat_Type: '-'
-    Base_Value: 0
-    Per_Level: 0
-    Effect_Trigger: weapon Set_Type == amor Set_Type == accessory Set_Type
-    Effect_Timing: using parrying
-    Effect_Type: hp
-    Effect_Value: 0
-    Effect_Time: 0
-    Effect_Chance: 0
-    Effect_Desc: "\u2022\uD328\uB9C1 \uBC1C\uB3D9 \uC2DC \uCCB4\uB825\uC744 \uD68C\uBCF5
-      \uD569\uB2C8\uB2E4."
-  - Equip_Id: 30028
-    Equip_Grade: Normal
-    Equip_Name: "\uC804\uC7A5\uC758 \uD074\uB7ED \uC54C\uB808\uADF8\uB85C"
-    Equip_Type: accessory
-    Equip_Set_Type: "\uC804\uC7A5\uC758"
-    Equip_Img: bat_ca.png
-    Equip_Level: 1
-    Equip_Maxlevel: 1
-    Equip_Upgrade_Default: 0
-    Equip_Upgrade_Plus: 0
-    Stat_Type: '-'
-    Base_Value: 0
-    Per_Level: 0
-    Effect_Trigger: weapon Set_Type == amor Set_Type == accessory Set_Type
-    Effect_Timing: kill enemy
-    Effect_Type: shild
-    Effect_Value: 1
-    Effect_Time: 0
-    Effect_Chance: 0
-    Effect_Desc: "\u2022\uBAB9 \uCC98\uCE58 \uC2DC \uC77C\uC815 \uD655\uB960\uB85C
-      \uC274\uB4DC\uAC00 \uC0DD\uC131 \uB429\uB2C8\uB2E4."
+  - {fileID: -5084430444233376633}
+  - {fileID: -5084430444233376633}
+  - {fileID: -223696044698179229}
+  - {fileID: -223696044698179229}
+  - {fileID: 60626863824846681}
+  - {fileID: 60626863824846681}
+  - {fileID: -8809829530309433159}
+  - {fileID: -8809829530309433159}
+  - {fileID: 4358338560064903838}
+  - {fileID: 4358338560064903838}
+  - {fileID: -1510853460367990319}
+  - {fileID: -1510853460367990319}
+  - {fileID: -1749159593965867120}
+  - {fileID: -1749159593965867120}
+  - {fileID: 7317542515687009336}
+  - {fileID: 7317542515687009336}
+  - {fileID: -1862590068643333208}
+  - {fileID: -1862590068643333208}
+  - {fileID: 7848190665715562090}
+  - {fileID: 7848190665715562090}
+  - {fileID: -3139040375886121128}
+  - {fileID: -3139040375886121128}
+  - {fileID: -6577165025895952097}
+  - {fileID: -6577165025895952097}
+  - {fileID: -4299587222052162165}
+  - {fileID: -4299587222052162165}
+  - {fileID: 8732984718056071105}
+  - {fileID: 8732984718056071105}
+  - {fileID: -3655988970919134009}
+  - {fileID: -3655988970919134009}
+  - {fileID: -2596614656593109294}
+  - {fileID: -2596614656593109294}
+  - {fileID: 3396547241760691234}
+  - {fileID: 3396547241760691234}
+  - {fileID: -8828863914571263513}
+  - {fileID: -8828863914571263513}
+  - {fileID: -5125295095546279013}
+  - {fileID: -5125295095546279013}
+  - {fileID: 627718126115506363}
+  - {fileID: 627718126115506363}
+  - {fileID: 4730864591657289099}
+  - {fileID: 4730864591657289099}
+  - {fileID: -1323697813816919823}
+  - {fileID: -1323697813816919823}
+  - {fileID: 496794463515200182}
+  - {fileID: 496794463515200182}
+  - {fileID: 171746311539723431}
+  - {fileID: 171746311539723431}
+  - {fileID: 648949110456384845}
+  - {fileID: 648949110456384845}
+  - {fileID: 7878559736117569504}
+  - {fileID: 7878559736117569504}
+  - {fileID: 1793895899795826745}
+  - {fileID: 1793895899795826745}
+  - {fileID: 5633858198636706853}
+  - {fileID: 5633858198636706853}
+  - {fileID: -4360386502965032510}
+  - {fileID: -4360386502965032510}
+  - {fileID: -9118636808811988673}
+  - {fileID: -9118636808811988673}
+  - {fileID: 6937925831823812732}
+  - {fileID: 6937925831823812732}
+--- !u!114 &60626863824846681
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 762c262d5dc83e747b29a16089a6310f, type: 3}
+  m_Name: EquipSO_0_3
+  m_EditorClassIdentifier: 
+  Equip_Id: 30002
+  Equip_Grade: 0
+  Equip_Name: "\uC751\uAE09\uC758 \uC624\uBC84\uB4DC\uB77C\uC774\uBE0C"
+  Equip_Type: 0
+  Equip_Set_Type: 1
+  Equip_Img: emg_ovd.png
+  Equip_Maxlevel: 5
+  Equip_Upgrade_Default: 1000
+  Equip_Upgrade_Plus: 1000
+  Stat_Type: 0
+  Base_Value: 20
+  Per_Level: 10
+  Effect_Trigger: '-'
+  Effect_Timing: '-'
+  Effect_Type: 0
+  Effect_Value: 0
+  Effect_Time: 0
+  Effect_Chance: 0
+  Effect_Desc: '-'
+--- !u!114 &171746311539723431
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 762c262d5dc83e747b29a16089a6310f, type: 3}
+  m_Name: EquipSO_0_24
+  m_EditorClassIdentifier: 
+  Equip_Id: 30023
+  Equip_Grade: 0
+  Equip_Name: "\uC804\uC7A5\uC758 \uD074\uB7ED \uD504\uB808\uC2A4\uD1A0"
+  Equip_Type: 2
+  Equip_Set_Type: 2
+  Equip_Img: bat_cp.png
+  Equip_Maxlevel: 1
+  Equip_Upgrade_Default: 0
+  Equip_Upgrade_Plus: 0
+  Stat_Type: 0
+  Base_Value: 0
+  Per_Level: 0
+  Effect_Trigger: weapon Set_Type == amor Set_Type == accessory Set_Type
+  Effect_Timing: kill enemy
+  Effect_Type: 2
+  Effect_Value: 1
+  Effect_Time: 0
+  Effect_Chance: 0
+  Effect_Desc: "\u2022\uBAB9 \uCC98\uCE58 \uC2DC \uC77C\uC815 \uD655\uB960\uB85C
+    \uC274\uB4DC\uAC00 \uC0DD\uC131 \uB429\uB2C8\uB2E4."
+--- !u!114 &496794463515200182
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 762c262d5dc83e747b29a16089a6310f, type: 3}
+  m_Name: EquipSO_0_23
+  m_EditorClassIdentifier: 
+  Equip_Id: 30022
+  Equip_Grade: 0
+  Equip_Name: "\uC751\uAE09\uC758 \uD074\uB7ED \uD504\uB808\uC2A4\uD1A0"
+  Equip_Type: 2
+  Equip_Set_Type: 1
+  Equip_Img: emg_cp.png
+  Equip_Maxlevel: 1
+  Equip_Upgrade_Default: 0
+  Equip_Upgrade_Plus: 0
+  Stat_Type: 0
+  Base_Value: 0
+  Per_Level: 0
+  Effect_Trigger: weapon Set_Type == amor Set_Type == accessory Set_Type
+  Effect_Timing: using parrying
+  Effect_Type: 1
+  Effect_Value: 0
+  Effect_Time: 0
+  Effect_Chance: 0
+  Effect_Desc: "\u2022\uD328\uB9C1 \uBC1C\uB3D9 \uC2DC \uCCB4\uB825\uC744 \uD68C\uBCF5
+    \uD569\uB2C8\uB2E4."
+--- !u!114 &627718126115506363
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 762c262d5dc83e747b29a16089a6310f, type: 3}
+  m_Name: EquipSO_0_20
+  m_EditorClassIdentifier: 
+  Equip_Id: 30019
+  Equip_Grade: 1
+  Equip_Name: "\uB9F9\uACF5\uC758 Dual-core"
+  Equip_Type: 1
+  Equip_Set_Type: 3
+  Equip_Img: sud_dct.png
+  Equip_Maxlevel: 5
+  Equip_Upgrade_Default: 1000
+  Equip_Upgrade_Plus: 1000
+  Stat_Type: 1
+  Base_Value: 50
+  Per_Level: 3
+  Effect_Trigger: '-'
+  Effect_Timing: '-'
+  Effect_Type: 0
+  Effect_Value: 0
+  Effect_Time: 0
+  Effect_Chance: 0
+  Effect_Desc: '-'
+--- !u!114 &648949110456384845
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 762c262d5dc83e747b29a16089a6310f, type: 3}
+  m_Name: EquipSO_0_25
+  m_EditorClassIdentifier: 
+  Equip_Id: 30024
+  Equip_Grade: 0
+  Equip_Name: "\uB9F9\uACF5\uC758 \uD074\uB7ED \uD504\uB808\uC2A4\uD1A0"
+  Equip_Type: 2
+  Equip_Set_Type: 3
+  Equip_Img: sud_cp.png
+  Equip_Maxlevel: 1
+  Equip_Upgrade_Default: 0
+  Equip_Upgrade_Plus: 0
+  Stat_Type: 0
+  Base_Value: 0
+  Per_Level: 0
+  Effect_Trigger: weapon Set_Type == amor Set_Type == accessory Set_Type
+  Effect_Timing: game start
+  Effect_Type: 3
+  Effect_Value: 0
+  Effect_Time: 0
+  Effect_Chance: 0
+  Effect_Desc: "\u2022\uAC8C\uC784 \uC2DC\uC791\uACFC \uB3D9\uC2DC\uC5D0 \uC18C\uB7C9\uC758
+    \uACF5\uACA9\uB825\uC774 \uC99D\uAC00 \uD569\uB2C8\uB2E4."
+--- !u!114 &1793895899795826745
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 762c262d5dc83e747b29a16089a6310f, type: 3}
+  m_Name: EquipSO_0_27
+  m_EditorClassIdentifier: 
+  Equip_Id: 30026
+  Equip_Grade: 1
+  Equip_Name: "\uCDA9\uC804\uC758 \uD074\uB7ED \uC54C\uB808\uADF8\uB85C"
+  Equip_Type: 2
+  Equip_Set_Type: 0
+  Equip_Img: chg_ca.png
+  Equip_Maxlevel: 1
+  Equip_Upgrade_Default: 0
+  Equip_Upgrade_Plus: 0
+  Stat_Type: 0
+  Base_Value: 0
+  Per_Level: 0
+  Effect_Trigger: weapon Set_Type == amor Set_Type == accessory Set_Type
+  Effect_Timing: game start
+  Effect_Type: 0
+  Effect_Value: 0
+  Effect_Time: 0
+  Effect_Chance: 0
+  Effect_Desc: "\u2022\uAC8C\uC784 \uC2DC\uC791\uACFC \uC885\uB8CC \uAE4C\uC9C0 \uC18C\uB7C9\uC758
+    \uAD81\uADF9\uAE30 \uAC8C\uC774\uC9C0\uAC00 \uC9C0\uC18D\uC801\uC73C\uB85C \uC99D\uAC00
+    \uD569\uB2C8\uB2E4"
+--- !u!114 &3396547241760691234
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 762c262d5dc83e747b29a16089a6310f, type: 3}
+  m_Name: EquipSO_0_17
+  m_EditorClassIdentifier: 
+  Equip_Id: 30016
+  Equip_Grade: 1
+  Equip_Name: "\uCDA9\uC804\uC758 Dual-core"
+  Equip_Type: 1
+  Equip_Set_Type: 0
+  Equip_Img: chg_dct.png
+  Equip_Maxlevel: 5
+  Equip_Upgrade_Default: 1000
+  Equip_Upgrade_Plus: 1000
+  Stat_Type: 1
+  Base_Value: 50
+  Per_Level: 3
+  Effect_Trigger: '-'
+  Effect_Timing: '-'
+  Effect_Type: 0
+  Effect_Value: 0
+  Effect_Time: 0
+  Effect_Chance: 0
+  Effect_Desc: '-'
+--- !u!114 &4358338560064903838
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 762c262d5dc83e747b29a16089a6310f, type: 3}
+  m_Name: EquipSO_0_5
+  m_EditorClassIdentifier: 
+  Equip_Id: 30004
+  Equip_Grade: 0
+  Equip_Name: "\uB9F9\uACF5\uC758 \uC624\uBC84\uB4DC\uB77C\uC774\uBE0C"
+  Equip_Type: 0
+  Equip_Set_Type: 3
+  Equip_Img: sud_ovd.png
+  Equip_Maxlevel: 5
+  Equip_Upgrade_Default: 1000
+  Equip_Upgrade_Plus: 1000
+  Stat_Type: 0
+  Base_Value: 20
+  Per_Level: 10
+  Effect_Trigger: '-'
+  Effect_Timing: '-'
+  Effect_Type: 0
+  Effect_Value: 0
+  Effect_Time: 0
+  Effect_Chance: 0
+  Effect_Desc: '-'
+--- !u!114 &4730864591657289099
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 762c262d5dc83e747b29a16089a6310f, type: 3}
+  m_Name: EquipSO_0_21
+  m_EditorClassIdentifier: 
+  Equip_Id: 30020
+  Equip_Grade: 1
+  Equip_Name: "\uAD11\uC18D\uC758 Dual-core"
+  Equip_Type: 1
+  Equip_Set_Type: 4
+  Equip_Img: lit_dct.png
+  Equip_Maxlevel: 5
+  Equip_Upgrade_Default: 1000
+  Equip_Upgrade_Plus: 1000
+  Stat_Type: 1
+  Base_Value: 50
+  Per_Level: 3
+  Effect_Trigger: '-'
+  Effect_Timing: '-'
+  Effect_Type: 0
+  Effect_Value: 0
+  Effect_Time: 0
+  Effect_Chance: 0
+  Effect_Desc: '-'
+--- !u!114 &5633858198636706853
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 762c262d5dc83e747b29a16089a6310f, type: 3}
+  m_Name: EquipSO_0_28
+  m_EditorClassIdentifier: 
+  Equip_Id: 30027
+  Equip_Grade: 1
+  Equip_Name: "\uC751\uAE09\uC758 \uD074\uB7ED \uC54C\uB808\uADF8\uB85C"
+  Equip_Type: 2
+  Equip_Set_Type: 1
+  Equip_Img: emg_ca.png
+  Equip_Maxlevel: 1
+  Equip_Upgrade_Default: 0
+  Equip_Upgrade_Plus: 0
+  Stat_Type: 0
+  Base_Value: 0
+  Per_Level: 0
+  Effect_Trigger: weapon Set_Type == amor Set_Type == accessory Set_Type
+  Effect_Timing: using parrying
+  Effect_Type: 1
+  Effect_Value: 0
+  Effect_Time: 0
+  Effect_Chance: 0
+  Effect_Desc: "\u2022\uD328\uB9C1 \uBC1C\uB3D9 \uC2DC \uCCB4\uB825\uC744 \uD68C\uBCF5
+    \uD569\uB2C8\uB2E4."
+--- !u!114 &6937925831823812732
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 762c262d5dc83e747b29a16089a6310f, type: 3}
+  m_Name: EquipSO_0_31
+  m_EditorClassIdentifier: 
+  Equip_Id: 30030
+  Equip_Grade: 1
+  Equip_Name: "\uAD11\uC18D\uC758 \uD074\uB7ED \uC54C\uB808\uADF8\uB85C"
+  Equip_Type: 2
+  Equip_Set_Type: 4
+  Equip_Img: lit_ca.png
+  Equip_Maxlevel: 1
+  Equip_Upgrade_Default: 0
+  Equip_Upgrade_Plus: 0
+  Stat_Type: 0
+  Base_Value: 0
+  Per_Level: 0
+  Effect_Trigger: weapon Set_Type == amor Set_Type == accessory Set_Type
+  Effect_Timing: using  ult
+  Effect_Type: 0
+  Effect_Value: 0.5
+  Effect_Time: 0
+  Effect_Chance: 0
+  Effect_Desc: "\u2022\uAD81\uADF9\uAE30 \uBC1C\uB3D9 \uC2DC \uC9E7\uC740 \uC2DC\uAC04
+    \uB3D9\uC548 \uB300\uB7C9\uC758 \uACF5\uACA9 \uC18D\uB3C4\uAC00 \uC0C1\uC2B9
+    \uD569\uB2C8\uB2E4."
+--- !u!114 &7317542515687009336
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 762c262d5dc83e747b29a16089a6310f, type: 3}
+  m_Name: EquipSO_0_8
+  m_EditorClassIdentifier: 
+  Equip_Id: 30007
+  Equip_Grade: 1
+  Equip_Name: "\uC751\uAE09\uC758 \uB514\uC2A4\uD1A0\uC158"
+  Equip_Type: 0
+  Equip_Set_Type: 1
+  Equip_Img: emg_dis.png
+  Equip_Maxlevel: 5
+  Equip_Upgrade_Default: 1000
+  Equip_Upgrade_Plus: 1000
+  Stat_Type: 0
+  Base_Value: 10
+  Per_Level: 5
+  Effect_Trigger: '-'
+  Effect_Timing: '-'
+  Effect_Type: 0
+  Effect_Value: 0
+  Effect_Time: 0
+  Effect_Chance: 0
+  Effect_Desc: '-'
+--- !u!114 &7848190665715562090
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 762c262d5dc83e747b29a16089a6310f, type: 3}
+  m_Name: EquipSO_0_10
+  m_EditorClassIdentifier: 
+  Equip_Id: 30009
+  Equip_Grade: 1
+  Equip_Name: "\uB9F9\uACF5\uC758 \uB514\uC2A4\uD1A0\uC158"
+  Equip_Type: 0
+  Equip_Set_Type: 3
+  Equip_Img: sud_dis.png
+  Equip_Maxlevel: 5
+  Equip_Upgrade_Default: 1000
+  Equip_Upgrade_Plus: 1000
+  Stat_Type: 0
+  Base_Value: 10
+  Per_Level: 5
+  Effect_Trigger: '-'
+  Effect_Timing: '-'
+  Effect_Type: 0
+  Effect_Value: 0
+  Effect_Time: 0
+  Effect_Chance: 0
+  Effect_Desc: '-'
+--- !u!114 &7878559736117569504
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 762c262d5dc83e747b29a16089a6310f, type: 3}
+  m_Name: EquipSO_0_26
+  m_EditorClassIdentifier: 
+  Equip_Id: 30025
+  Equip_Grade: 0
+  Equip_Name: "\uAD11\uC18D\uC758 \uD074\uB7ED \uD504\uB808\uC2A4\uD1A0"
+  Equip_Type: 2
+  Equip_Set_Type: 4
+  Equip_Img: lit_cp.png
+  Equip_Maxlevel: 1
+  Equip_Upgrade_Default: 0
+  Equip_Upgrade_Plus: 0
+  Stat_Type: 0
+  Base_Value: 0
+  Per_Level: 0
+  Effect_Trigger: weapon Set_Type == amor Set_Type == accessory Set_Type
+  Effect_Timing: using  ult
+  Effect_Type: 0
+  Effect_Value: 1
+  Effect_Time: 0
+  Effect_Chance: 0
+  Effect_Desc: "\u2022\uAD81\uADF9\uAE30 \uBC1C\uB3D9 \uC2DC \uC9E7\uC740 \uC2DC\uAC04
+    \uB3D9\uC548 \uB300\uB7C9\uC758 \uACF5\uACA9 \uC18D\uB3C4\uAC00 \uC0C1\uC2B9
+    \uD569\uB2C8\uB2E4."
+--- !u!114 &8732984718056071105
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 762c262d5dc83e747b29a16089a6310f, type: 3}
+  m_Name: EquipSO_0_14
+  m_EditorClassIdentifier: 
+  Equip_Id: 30013
+  Equip_Grade: 0
+  Equip_Name: "\uC804\uC7A5\uC758 Octa-core"
+  Equip_Type: 1
+  Equip_Set_Type: 2
+  Equip_Img: bat_oct.png
+  Equip_Maxlevel: 5
+  Equip_Upgrade_Default: 1000
+  Equip_Upgrade_Plus: 1000
+  Stat_Type: 1
+  Base_Value: 100
+  Per_Level: 6
+  Effect_Trigger: '-'
+  Effect_Timing: '-'
+  Effect_Type: 0
+  Effect_Value: 0
+  Effect_Time: 0
+  Effect_Chance: 0
+  Effect_Desc: '-'

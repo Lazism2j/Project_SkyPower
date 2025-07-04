@@ -2,7 +2,7 @@ using System.Collections.Generic;
 using System.IO;
 using UnityEditor;
 using UnityEngine;
-using static KYG_skyPower.EquipmentTableSOContainer;
+
 
 namespace KYG_skyPower
 {
@@ -19,6 +19,7 @@ namespace KYG_skyPower
             // EquipmentTableSO 인스턴스
             EquipmentTableSO asset = ScriptableObject.CreateInstance<EquipmentTableSO>();
             asset.equipmentList = new List<EquipmentDataSO>();
+            AssetDatabase.CreateAsset(asset, soPath); // 이 부분은 asset이 없을 때만 호출, 이미 있다면 안됨!
 
             for (int i = 1; i < lines.Length; i++) // 0번은 헤더
             {
@@ -27,6 +28,11 @@ namespace KYG_skyPower
 
                 // EquipmentDataSO 인스턴스 생성 (SO는 반드시 이렇게 생성!)
                 var data = ScriptableObject.CreateInstance<EquipmentDataSO>();
+
+                data.name = $"EquipSO_{data.Equip_Id}_{i}";
+                asset.equipmentList.Add(data);
+                
+
 
                 data.Equip_Id = ParseInt(tokens[0]);
                 data.Equip_Grade = ParseEnum<EquipmentGrade>(tokens[1]);
@@ -49,10 +55,13 @@ namespace KYG_skyPower
                 data.Effect_Desc = tokens.Length > 19 ? tokens[19].Trim() : "";
 
                 asset.equipmentList.Add(data); // 리스트에 추가
+                AssetDatabase.AddObjectToAsset(data, asset);
             }
 
-            AssetDatabase.CreateAsset(asset, soPath);
+
+            EditorUtility.SetDirty(asset);
             AssetDatabase.SaveAssets();
+            AssetDatabase.Refresh();
             Debug.Log("장비 CSV → SO 변환 완료!");
         }
 
