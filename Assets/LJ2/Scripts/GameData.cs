@@ -10,6 +10,8 @@ public partial class GameData : SaveData
 
     public CharacterInventory characterInventory;
     public StageInfo[] stageInfo;
+    internal object equipmentInventory;
+
     public bool isEmpty => string.IsNullOrEmpty(playerName);
 
     public GameData()

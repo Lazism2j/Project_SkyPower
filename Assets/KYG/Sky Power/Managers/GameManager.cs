@@ -5,6 +5,7 @@ using UnityEngine;
 using UnityEngine.Events;
 using LJ2;
 using IO;
+using KYG_skyPower;
 
 
 namespace KYG_skyPower
@@ -31,6 +32,8 @@ namespace KYG_skyPower
     {
         public UnityEvent onGameOver, onPause, onResume, onGameClear;
 
+        public EquipmentManagerSO equipmentManagerSO;
+
         public GameData[] saveFiles = new GameData[3]; // 세이브 파일 3개
 
         public int currentSaveIndex { get; private set; } = 0;
@@ -48,41 +51,55 @@ namespace KYG_skyPower
         //[SerializeField] private int defaultPlayerHP = 5;
         //public int playerHp { get; private set; } // 플레이어에 붙을 수도 있지만 나중에 추가 될지 몰라 주석 처리
 
-        public override void Init() // 게임 시작시 세이브 데이터 로드
+        public override void Init() // 게임 시작시 세이브 데이터 로드  
         {
-            ResetSaveRef();
-        }
-        public void ResetSaveRef()
-        {
-            for (int i = 0; i < saveFiles.Length; i++)
+            ResetSaveRef(); // 세이브 데이터 초기화  
+
+            // 수정된 코드: equipmentInventory를 GameData에서 적절한 형식으로 캐스팅하여 사용  
+            if (CurrentSave.equipmentInventory is EquipmentInventory inventory)
             {
-                saveFiles[i] = new GameData();
+                equipmentManagerSO.savedEquipments = inventory.equipments; // 현재 세이브 파일의 장비 정보 로드  
+                equipmentManagerSO.BuildRuntimeInventory(); // 런타임 인벤토리 갱신  
+            }
+            else
+            {
+                Debug.LogError("equipmentInventory가 EquipmentInventory 형식이 아닙니다.");
+            }
+        }
+        public void ResetSaveRef() 
+        {
+            for (int i = 0; i < saveFiles.Length; i++) // 세이브 파일 초기화
+            {
+                saveFiles[i] = new GameData(); // 새 GameData 객체 생성
                 SaveManager.Instance.GameLoad(ref saveFiles[i], i + 1); // 인덱스 1부터
             }
         }
 
-        public Dictionary<KYG_skyPower.EquipmentSlotType, EquipmentData> equippedDict = new();
+        public Dictionary<KYG_skyPower.EquipmentType, EquipmentDataSO> equippedDict = new(); // 장착된 장비 딕셔너리 (슬롯 타입 -> 장비 데이터)
 
-        public void Equip(EquipmentData equip)
+        public void EquipToCharacter(int equipId, int charId) // 캐릭터에 장비 장착
         {
-            equippedDict[equip.GetSlotType()] = equip;
-            // 상태 갱신, 능력치 갱신 등
+            equipmentManagerSO.Equip(equipId, charId);
+            // 캐릭터 상태, 능력치 등 추가로 갱신
         }
 
-        public bool IsEquipped(IInventoryItemAdapter equip)
+        public void UnequipFromCharacter(int equipId) // 캐릭터에서 장비 해제
         {
-            if (equip is EquipmentData data)
-            {
-                if (equippedDict.TryGetValue(data.GetSlotType(), out var equipped))
-                    return equipped == data;
-            }
-            return false;
+            equipmentManagerSO.Unequip(equipId); // 장비 해제
+        }
+
+        public void AddEquipmentToInventory(int equipId, EquipmentType slotType) // 인벤토리에 장비 추가
+        {
+            equipmentManagerSO.AddEquipment(equipId, slotType); // 장비 추가
         }
 
         public void SelectSaveFile(int index)
         {
             if (index >= 0 && index < saveFiles.Length)
                 currentSaveIndex = index;
+
+            
+            equipmentManagerSO.BuildRuntimeInventory(); // 현재 세이브 파일의 장비 정보 로드
         }
 
         /*private void Awake() // 싱글톤 패턴
